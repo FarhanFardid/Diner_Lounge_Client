@@ -31,7 +31,7 @@ const Navigation = () => {
         <div className="navbar bg-slate-900 text-white bg-opacity-80">
         <div className="navbar-start">
         <a className=" normal-case  "> <img src={logo} alt="logo" className='md:w-20 md:h-20 md:p-1 w-12 h-12 rounded-full md:mr-3 ' /> </a>
-        <span className=" md:text-3xl text-lg font-bold ms-1 ">Bistro Boss Restaurant</span>
+        <p className=" md:text-2xl text-lg font-bold ms-1  ">BISTRO BOSS <span className='text-lg block text-center'>RESTAURANT</span> </p>
           <div className="dropdown navbar-center">
             <label tabIndex={0} className="btn btn-ghost  lg:hidden">
               <svg
