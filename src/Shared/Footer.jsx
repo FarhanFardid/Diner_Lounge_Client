@@ -39,6 +39,7 @@ const Footer = () => {
         </div>
         <div className="md:mt-5 col-span-4 text-center">
           <p className="font-bold text-white  text-lg ">&copy; {new Date().getFullYear()} Bistro Boss Restaurant. All rights reserved.</p>
+          <p className="font-bold text-white  text-lg ">Developed By &copy; <span className="text-red-600">Farhan Fardid</span>  </p>
         </div>
       </footer>
     );
