@@ -20,7 +20,7 @@ const Menu = () => {
     return (
         <div>
             <SectionTitle heading="From Our Menu" subHeading="Check it out"></SectionTitle>
-             <div>
+             <div className="grid md:grid-cols-2 gap-2 p-3 mb-3">
                 {
                     menu.map(item => <ItemCard key={item._id} item={item}></ItemCard>)
                 }
