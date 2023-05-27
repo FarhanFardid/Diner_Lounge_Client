@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import SectionTitle from "../../Shared/SectionTitle";
 import ItemCard from "../../Shared/ItemCard";
+import Btn from "../../Components/Btn";
 
 
 const Menu = () => {
@@ -16,7 +17,7 @@ const Menu = () => {
             
         })
     },[])
-    console.log(menu)
+    // console.log(menu)
     return (
         <div>
             <SectionTitle heading="From Our Menu" subHeading="Check it out"></SectionTitle>
@@ -25,6 +26,7 @@ const Menu = () => {
                     menu.map(item => <ItemCard key={item._id} item={item}></ItemCard>)
                 }
         </div>
+        <Btn btn="View Full Menu"></Btn>
         </div>
 
     );

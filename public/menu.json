@@ -1,20 +1,13 @@
 [
     {
         "_id": "642c155b2c4774f05c36eeaa",
-        "name": "Haddock",
-        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "salad",
+        "name": "Baked Haddock",
+        "recipe": "Baked Haddock is a simple and tasty dish where fresh haddock fillets are seasoned, topped with breadcrumbs and butter, then baked until the fish is tender and flaky.",
+        "image": "https://www.allrecipes.com/thmb/v7iiQ3oceBQ0cr6TVwb9K3cRpXU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/4535513-6c4baac83f90418084c377567106a708.jpg",
+        "category": "fish",
         "price": 14.7
     },
-    {
-        "_id": "642c155b2c4774f05c36eeb9",
-        "name": "Haddock",
-        "recipe": "Chargrilled fresh tuna steak (served medium rare) on classic Niçoise salad with French beans.",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
-        "category": "drinks",
-        "price": 14.7
-    },
+   
     {
         "_id": "642c155b2c4774f05c36ee7c",
         "name": "Escalope de Veau",
@@ -23,14 +16,7 @@
         "category": "popular",
         "price": 11.5
     },
-    {
-        "_id": "642c155b2c4774f05c36ee88",
-        "name": "Escalope de Veau",
-        "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
-        "category": "dessert",
-        "price": 12.5
-    },
+  
     {
         "_id": "642c155b2c4774f05c36ee7a",
         "name": "Roast Duck Breast",
@@ -40,12 +26,12 @@
         "price": 13.5
     },
     {
-        "_id": "642c155b2c4774f05c36ee8c",
+        "_id": "642c155b2c4774f05c36ee7c",
         "name": "Escalope de Veau",
-        "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
-        "category": "dessert",
-        "price": 12.5
+        "recipe": "Escalope de Veau is a classic dish made by coating thinly sliced veal in breadcrumbs, then frying it until golden brown and crispy, resulting in a tender and flavorful meat dish.",
+        "image": "https://www.finedininglovers.fr/sites/g/files/xknfdk1291/files/styles/recipes_1200_800_fallback/public/fdl_content_import_scripts/Original_165_scaloppine-milanesi-escalopes-veau-panees_0.jpg?itok=WLr99VOQ",
+        "category": "meat",
+        "price": 11.5
     },
     {
         "_id": "642c155b2c4774f05c36ee94",
