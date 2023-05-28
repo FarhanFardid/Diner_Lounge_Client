@@ -7,13 +7,14 @@ import saladBan from '../../assets/menu/salad-bg.jpg'
 const Salads = () => {
     const [salads,setSalads] = useState([]);
     useEffect(()=>{
-        fetch('menu.json')
+        fetch('salad.json')
         .then(res => res.json())
         .then (data => {
-            console.log(data);
-            const salad = data.filter(dt=> dt.category === 'salad');
-            setSalads(salad)
-            console.log(salad);
+            // console.log(data);
+            // const salad = data.filter(dt=> dt.category === 'salad');
+            // setSalads(salad)
+            // console.log(salad);
+            setSalads(data)
         })
     },[])
     return (

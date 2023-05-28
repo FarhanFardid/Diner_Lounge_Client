@@ -7,12 +7,13 @@ import Btn from "../../Components/Btn";
 const Pizza = () => {
     const[pizzas,setPizzas] = useState([]);
     useEffect(()=>{
-        fetch('menu.json')
+        fetch('pizza.json')
         .then (res=> res.json())
         .then(data=> {
-            const pizza = data.filter(pi=> pi.category === "pizza")
-            // console.log(pizza)
-            setPizzas(pizza)
+            // const pizza = data.filter(pi=> pi.category === "pizza")
+            // // console.log(pizza)
+            // setPizzas(pizza)
+            setPizzas(data)
         })
     },[])
     return (
