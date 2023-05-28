@@ -6,7 +6,7 @@ import ban3 from '../../assets/home/03.png'
 import ban4 from '../../assets/home/04.jpg'
 import ban5 from '../../assets/home/05.png'
 import ban6 from '../../assets/home/06.png'
-const Banner = () => {
+const HomeBanner = () => {
     return (
         <Carousel className="autoPlay infiniteLoop">
         <div>
@@ -37,4 +37,4 @@ const Banner = () => {
     );
 };
 
-export default Banner;
+export default HomeBanner;

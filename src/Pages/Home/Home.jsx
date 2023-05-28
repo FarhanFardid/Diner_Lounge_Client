@@ -1,4 +1,4 @@
-import Banner from "./Banner";
+import HomeBanner from "./HomeBanner";
 import CallUs from "./CallUs";
 import Featured from "./Featured";
 import Menu from "./Menu";
@@ -12,7 +12,7 @@ import Testimonials from "./Testimonials";
 const Home = () => {
     return (
         <div>
-            <Banner></Banner>
+            <HomeBanner></HomeBanner>
             <Slider></Slider>
             <Poster></Poster>
             <Menu></Menu>

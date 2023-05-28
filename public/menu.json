@@ -8,25 +8,11 @@
         "price": 14.7
     },
    
-    {
-        "_id": "642c155b2c4774f05c36ee7c",
-        "name": "Escalope de Veau",
-        "recipe": "Escalope de Veau is a classic dish made by coating thinly sliced veal in breadcrumbs, then frying it until golden brown and crispy, resulting in a tender and flavorful meat dish.",
-        "image": "https://www.finedininglovers.fr/sites/g/files/xknfdk1291/files/styles/recipes_1200_800_fallback/public/fdl_content_import_scripts/Original_165_scaloppine-milanesi-escalopes-veau-panees_0.jpg?itok=WLr99VOQ",
-        "category": "popular",
-        "price": 11.5
-    },
   
+  
+
     {
-        "_id": "642c155b2c4774f05c36ee7a",
-        "name": "Roast Duck Breast",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "https://img.taste.com.au/ZBfq03Py/taste/2016/11/roast-duck-breast-with-fig-and-anchovy-salsa-89065-1.jpeg",
-        "category": "popular",
-        "price": 13.5
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee7c",
+        "_id": "642c155b2c4774f05c36ee7d",
         "name": "Escalope de Veau",
         "recipe": "Escalope de Veau is a classic dish made by coating thinly sliced veal in breadcrumbs, then frying it until golden brown and crispy, resulting in a tender and flavorful meat dish.",
         "image": "https://www.finedininglovers.fr/sites/g/files/xknfdk1291/files/styles/recipes_1200_800_fallback/public/fdl_content_import_scripts/Original_165_scaloppine-milanesi-escalopes-veau-panees_0.jpg?itok=WLr99VOQ",
@@ -89,14 +75,7 @@
         "category": "pizza",
         "price": 9.5
     },
-    {
-        "_id": "642c155b2c4774f05c36ee81",
-        "name": "Tuna Niçoise",
-        "recipe": "Warm goats cheese and roasted vegetable salad with black olive tapenade crostini",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
-        "category": "offered",
-        "price": 10.5
-    },
+   
     {
         "_id": "642c155b2c4774f05c36ee84",
         "name": "Roast Duck Breast",
@@ -129,22 +108,7 @@
         "category": "dessert",
         "price": 13.5
     },
-    {
-        "_id": "642c155b2c4774f05c36ee83",
-        "name": "Chicken and Walnut Salad",
-        "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
-        "category": "offered",
-        "price": 13.5
-    },
-    {
-        "_id": "642c155b2c4774f05c36ee7f",
-        "name": "Roasted Pork Belly",
-        "recipe": "Roasted Pork Belly is a succulent dish made by marinating and seasoning pork belly, then roasting it until the skin turns crispy and the meat becomes tender and juicy",
-        "image": "https://recipes.pork.com.au/wp-content/uploads/sites/2/2018/10/Fool-proof-roast-pork-belly-2400-x-1800.jpg",
-        "category": "popular",
-        "price": 14.5
-    },
+ 
     {
         "_id": "642c155b2c4774f05c36eea8",
         "name": "Chicken and Walnut Salad",
@@ -161,14 +125,7 @@
         "category": "drinks",
         "price": 14.7
     },
-    {
-        "_id": "642c155b2c4774f05c36ee80",
-        "name": "Roast Duck Breast",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-4-370x247.jpg",
-        "category": "offered",
-        "price": 14.5
-    },
+ 
     {
         "_id": "642c155b2c4774f05c36ee90",
         "name": "Fish Parmentier",
@@ -249,14 +206,7 @@
         "category": "soup",
         "price": 14.7
     },
-    {
-        "_id": "642c155b2c4774f05c36ee7e",
-        "name": "Fish Parmentier",
-        "recipe": "Fish Parmentier is a delicious dish consisting of layers of cooked fish, creamy mashed potatoes, and a flavorful sauce baked to perfection",
-        "image": "https://www.goodfellos.com/Brick-Oven-Pizza-Wine-Bar/wp-content/uploads/2016/08/product-8.jpg",
-        "category": "popular",
-        "price": 12.5
-    },
+  
     {
         "_id": "642c155b2c4774f05c36ee8b",
         "name": "Chicken and Walnut Salad",
@@ -385,14 +335,7 @@
         "category": "pizza",
         "price": 12.9
     },
-    {
-        "_id": "642c155b2c4774f05c36ee82",
-        "name": "Escalope de Veau",
-        "recipe": "Pan roasted haddock fillet wrapped in smoked French bacon with pea purée and tomato and chive vinaigrette",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-2-370x247.jpg",
-        "category": "offered",
-        "price": 12.5
-    },
+ 
     {
         "_id": "642c155b2c4774f05c36ee86",
         "name": "Escalope de Veau",

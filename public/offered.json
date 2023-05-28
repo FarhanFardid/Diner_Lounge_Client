@@ -1,0 +1,34 @@
+[
+    {
+        "_id": "642c155b2c4774f05c36ee81o1",
+        "name": "Tuna Niçoise",
+        "recipe": "Fresh tuna, boiled potatoes, green beans, cherry tomatoes, boiled eggs, and olives combined in a vibrant salad, drizzled with a zesty vinaigrette—Tuna Nicoise, a delicious classic",
+        "image": "https://www.familyfoodonthetable.com/wp-content/uploads/2023/01/Tuna-nicoise-salad-1200-11-720x720.jpg",
+        "category": "offered",
+        "price": 10.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee83o2",
+        "name": "Chicken and Walnut Salad",
+        "recipe": "Tender grilled chicken, crunchy walnuts, crisp lettuce, juicy grapes, and tangy dressing come together in a delightful Chicken Walnut Salad, a perfect balance of flavors and textures",
+        "image": "https://www.cookingclassy.com/wp-content/uploads/2013/11/chicken-apple-bacon-walnut-salad3-edit+srgb.-475x500.jpg",
+        "category": "offered",
+        "price": 13.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7ao3",
+        "name": "Roast Duck Breast",
+        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "https://img.taste.com.au/ZBfq03Py/taste/2016/11/roast-duck-breast-with-fig-and-anchovy-salsa-89065-1.jpeg",
+        "category": "offered",
+        "price": 13.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7eo4",
+        "name": "Escalope de Veau",
+        "recipe": "Escalope de Veau is a classic dish made by coating thinly sliced veal in breadcrumbs, then frying it until golden brown and crispy, resulting in a tender and flavorful meat dish.",
+        "image": "https://www.finedininglovers.fr/sites/g/files/xknfdk1291/files/styles/recipes_1200_800_fallback/public/fdl_content_import_scripts/Original_165_scaloppine-milanesi-escalopes-veau-panees_0.jpg?itok=WLr99VOQ",
+        "category": "offered",
+        "price": 11.5
+    }
+]
