@@ -1,67 +1,67 @@
 [
     {
-        "_id": "642c155b2c4774f05c36eeaa",
-        "name": "Haddock Salads",
-        "recipe": "Baked Haddock is a simple and tasty dish where fresh haddock fillets are seasoned, topped with breadcrumbs and butter, then baked until the fish is tender and flaky.",
-        "image": "https://images.getrecipekit.com/20220426134735-bbq_haddock_and_qunioa_recipe_1000x.webp?class=16x9",
+        "_id": "642c155b2c4774f05c36eeaas1",
+        "name": "Caesar Salad",
+        "recipe": "Romaine lettuce, croutons, Parmesan cheese, and Caesar dressing.",
+        "image": "https://www.recipetineats.com/wp-content/uploads/2016/05/Caesar-Salad_7-SQ.jpg",
         "category": "salad",
         "price": 14.7
     },    {
-        "_id": "642c155b2c4774f05c36eea6",
-        "name": "Chicken and Walnut Salad",
-        "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
+        "_id": "642c155b2c4774f05c36eea6s2",
+        "name": "Greek Salad",
+        "recipe": "Tomatoes, cucumbers, red onions, feta cheese, olives, and a lemon-oregano dressing",
+        "image": "https://www.cookingclassy.com/wp-content/uploads/2021/03/cobb-salad-18.jpg",
         "category": "salad",
         "price": 13.5
     },   {
-        "_id": "642c155b2c4774f05c36eea4",
-        "name": "Chicken and Walnut Salad",
-        "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
+        "_id": "642c155b2c4774f05c36eea4s3",
+        "name": "Cobb Salad",
+        "recipe": "Mixed greens, grilled chicken, bacon, hard-boiled eggs, avocado, tomatoes, and blue cheese dressing",
+        "image": "https://www.areinventedmom.com/wp-content/uploads/2020/07/Chicken-Cobb-Salad-Pin1-feat3.jpg",
         "category": "salad",
         "price": 13.5
     },   {
-        "_id": "642c155b2c4774f05c36eea5",
-        "name": "Fish Parmentier",
-        "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
+        "_id": "642c155b2c4774f05c36eea5s4",
+        "name": "Caprese Salad",
+        "recipe": "Fresh mozzarella, tomatoes, basil leaves, drizzled with balsamic glaze.",
+        "image": "https://feelgoodfoodie.net/wp-content/uploads/2017/03/Avocado-Caprese-Salad-5.jpg",
         "category": "salad",
         "price": 9.5
     },
     {
-        "_id": "642c155b2c4774f05c36eea8",
-        "name": "Chicken and Walnut Salad",
-        "recipe": "Pan roasted pork belly with gratin potato, braised Savoy cabbage, apples, thyme and calvados jus",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-3-370x247.jpg",
+        "_id": "642c155b2c4774f05c36eea8s5",
+        "name": "Waldorf Salad",
+        "recipe": "Apples, celery, grapes, walnuts, and a creamy mayonnaise dressing",
+        "image": "https://www.foodiecrush.com/wp-content/uploads/2020/05/Waldorf-Salad-foodiecrush.com-010.jpg",
         "category": "salad",
         "price": 13.5
     },
     {
-        "_id": "642c155b2c4774f05c36eea7",
-        "name": "Fish Parmentier",
-        "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
+        "_id": "642c155b2c4774f05c36eea7s6",
+        "name": "Niçoise Salad",
+        "recipe": "Mixed greens, tuna, hard-boiled eggs, green beans, potatoes, and olives, with a Dijon vinaigrette.",
+        "image": "https://www.healthier.qld.gov.au/wp-content/uploads/2017/05/Nicoise-Salad-0001-640x420.jpg",
         "category": "salad",
         "price": 9.5
     },   {
-        "_id": "642c155b2c4774f05c36eea9",
-        "name": "Fish Parmentier",
-        "recipe": "Sautéed breaded veal escalope with watercress, lemon and veal jus.",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-8-370x247.jpg",
+        "_id": "642c155b2c4774f05c36eea9s7",
+        "name": "Thai Beef Salad",
+        "recipe": "Grilled beef, mixed greens, cucumbers, red onions, cilantro, and a spicy lime dressing.",
+        "image": "https://atastykitchen.com/wp-content/uploads/2022/10/Thai-beef-salad-5.jpg",
         "category": "salad",
         "price": 9.5
     },  {
-        "_id": "642c155b2c4774f05c36eeac",
-        "name": "Roasted Pork Belly",
-        "recipe": "Chargrilled chicken with avocado, baby gem lettuce, baby spinach, shallots, French beans, walnuts, croutons and a mustard dressing",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg",
+        "_id": "642c155b2c4774f05c36eeacs8",
+        "name": "Spinach and Strawberry Salad",
+        "recipe": "Baby spinach, sliced strawberries, goat cheese, candied pecans, and a balsamic vinaigrette",
+        "image": "https://lifemadesweeter.com/wp-content/uploads/Strawberry-Spinach-Salad-Recipe-Photo-Picture-500x500.jpg",
         "category": "salad",
         "price": 14.5
     },{
-        "_id": "642c155b2c4774f05c36eeab",
-        "name": "Goats Cheese Pizza",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2017/01/bbq-370x247.jpg",
+        "_id": "642c155b2c4774f05c36eeabs9",
+        "name": "Mexican Corn Salad",
+        "recipe": "Grilled corn, black beans, red bell peppers, avocado, cilantro, and a lime-cumin dressing.",
+        "image": "https://www.jessicagavin.com/wp-content/uploads/2016/06/mexican-street-corn-salad-cheese-chipotle-dressing-1200.jpg",
         "category": "salad",
         "price": 14.5
     }
