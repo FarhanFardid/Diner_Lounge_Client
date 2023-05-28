@@ -1,12 +1,10 @@
 import CommonBanner from "../../Shared/CommonBanner";
 import MenuBan from '../../assets/menu/banner3.jpg'
-
-
-import dessertpBan from '../../assets/menu/dessert-bg.jpeg'
-import saladBan from '../../assets/menu/salad-bg.jpg'
 import TodayOffer from "./TodayOffer";
 import Pizza from "./Pizza";
 import Soup from "./Soup";
+import Desserts from "./Desserts";
+import Salads from "./Salads";
 
 
 
@@ -17,6 +15,8 @@ const Menu = () => {
            <TodayOffer></TodayOffer>
            <Pizza></Pizza>
            <Soup></Soup>
+           <Desserts></Desserts>
+           <Salads></Salads>
 
         </div>
     );

@@ -13,7 +13,7 @@ const TodayOffer = () => {
             // const offer = data.filter(dt => dt.category === "offered")
             // console.log(offer);
             setOffers(data);
-            console.log(data);
+            // console.log(data);
         })
     },[])
     return (

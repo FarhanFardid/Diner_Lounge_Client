@@ -11,7 +11,7 @@ const Pizza = () => {
         .then (res=> res.json())
         .then(data=> {
             const pizza = data.filter(pi=> pi.category === "pizza")
-            console.log(pizza)
+            // console.log(pizza)
             setPizzas(pizza)
         })
     },[])
