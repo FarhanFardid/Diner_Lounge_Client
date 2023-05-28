@@ -1,41 +1,373 @@
 [
-   
-   
-  
-  
-
- 
-  
-   
-
- 
-   
-   
-  
- 
- 
-   
- 
-
- 
-  
-  
-  
-   
-  
-
-  
- 
-  
+    {
+        "_id": "642c155b2c4774f05c36ee81o1",
+        "name": "Tuna Niçoise",
+        "recipe": "Fresh tuna, boiled potatoes, green beans, cherry tomatoes, boiled eggs, and olives combined in a vibrant salad, drizzled with a zesty vinaigrette—Tuna Nicoise, a delicious classic",
+        "image": "https://www.familyfoodonthetable.com/wp-content/uploads/2023/01/Tuna-nicoise-salad-1200-11-720x720.jpg",
+        "category": "offered",
+        "price": 10.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee83o2",
+        "name": "Chicken and Walnut Salad",
+        "recipe": "Tender grilled chicken, crunchy walnuts, crisp lettuce, juicy grapes, and tangy dressing come together in a delightful Chicken Walnut Salad, a perfect balance of flavors and textures",
+        "image": "https://www.cookingclassy.com/wp-content/uploads/2013/11/chicken-apple-bacon-walnut-salad3-edit+srgb.-475x500.jpg",
+        "category": "offered",
+        "price": 13.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7ao3",
+        "name": "Roast Duck Breast",
+        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "https://img.taste.com.au/ZBfq03Py/taste/2016/11/roast-duck-breast-with-fig-and-anchovy-salsa-89065-1.jpeg",
+        "category": "offered",
+        "price": 13.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7eo4",
+        "name": "Escalope de Veau",
+        "recipe": "Escalope de Veau is a classic dish made by coating thinly sliced veal in breadcrumbs, then frying it until golden brown and crispy, resulting in a tender and flavorful meat dish.",
+        "image": "https://www.finedininglovers.fr/sites/g/files/xknfdk1291/files/styles/recipes_1200_800_fallback/public/fdl_content_import_scripts/Original_165_scaloppine-milanesi-escalopes-veau-panees_0.jpg?itok=WLr99VOQ",
+        "category": "offered",
+        "price": 11.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7cp1",
+        "name": "Escalope de Veau",
+        "recipe": "Escalope de Veau is a classic dish made by coating thinly sliced veal in breadcrumbs, then frying it until golden brown and crispy, resulting in a tender and flavorful meat dish.",
+        "image": "https://www.finedininglovers.fr/sites/g/files/xknfdk1291/files/styles/recipes_1200_800_fallback/public/fdl_content_import_scripts/Original_165_scaloppine-milanesi-escalopes-veau-panees_0.jpg?itok=WLr99VOQ",
+        "category": "popular",
+        "price": 11.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7ap2",
+        "name": "Roast Duck Breast",
+        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
+        "image": "https://img.taste.com.au/ZBfq03Py/taste/2016/11/roast-duck-breast-with-fig-and-anchovy-salsa-89065-1.jpeg",
+        "category": "popular",
+        "price": 13.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7xp3",
+        "name": "Roasted Pork Belly",
+        "recipe": "Roasted Pork Belly is a succulent dish made by marinating and seasoning pork belly, then roasting it until the skin turns crispy and the meat becomes tender and juicy",
+        "image": "https://recipes.pork.com.au/wp-content/uploads/sites/2/2018/10/Fool-proof-roast-pork-belly-2400-x-1800.jpg",
+        "category": "popular",
+        "price": 14.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7p4",
+        "name": "Fish Parmentier",
+        "recipe": "Fish Parmentier is a delicious dish consisting of layers of cooked fish, creamy mashed potatoes, and a flavorful sauce baked to perfection",
+        "image": "https://www.goodfellos.com/Brick-Oven-Pizza-Wine-Bar/wp-content/uploads/2016/08/product-8.jpg",
+        "category": "popular",
+        "price": 12.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee7dp1",
+        "name": "Margherita Pizza",
+        "recipe": "Tomato sauce, mozzarella cheese, fresh basil leaves, and a drizzle of olive oil.",
+        "image": "https://www.abeautifulplate.com/wp-content/uploads/2015/08/the-best-homemade-margherita-pizza-1-4-500x500.jpg",
+        "category": "pizza",
+        "price": 11.5
+    }, 
     
-
-   
- 
- 
-  
-  
-   
-   
-    
-  
+    {
+        "_id": "642c155b2c4774f05c36ee9ep3",
+        "name": "Hawaiian Pizza",
+        "recipe": " Tomato sauce, mozzarella cheese, ham or Canadian bacon, and pineapple chunks",
+        "image": "https://www.jessicagavin.com/wp-content/uploads/2020/07/hawaiian-pizza-16-1200.jpg",
+        "category": "pizza",
+        "price": 12.9
+    }, 
+    {
+        "_id": "642c155b2c4774f05c36ee96p4",
+        "name": "BBQ Chicken Pizza",
+        "recipe": " BBQ sauce, mozzarella cheese, grilled chicken, red onions, and cilantro.",
+        "image": "https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2022/02/bbq-chicken-pizza-1.jpg",
+        "category": "pizza",
+        "price": 9.5
+    },  
+      {
+        "_id": "642c155b2c4774f05c36ee99p5",
+        "name": "Goats Cheese Pizza",
+        "recipe": "Olive oil or garlic sauce, mozzarella cheese, crumbled goat cheese, caramelized onions, roasted garlic, and fresh arugula on top after baking",
+        "image": "https://www.fuegowoodfiredovens.com/wp-content/uploads/2022/08/goats-cheese-caramelised-onions-and-fig-pizza.jpg",
+        "category": "pizza",
+        "price": 14.5
+    }, 
+    {
+        "_id": "642c155b2c4774f05c36ee97p6",
+        "name": "Veggie Supreme Pizza",
+        "recipe": " Tomato sauce, mozzarella cheese, bell peppers, mushrooms, onions, olives, and tomatoes.",
+        "image": "https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/veggie-supreme.bc8dd369182b636ff171077efa53c344.1.jpg",
+        "category": "pizza",
+        "price": 14.7
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea0p7",
+        "name": "Meat Lovers Pizza",
+        "recipe": "Tomato sauce, mozzarella cheese, pepperoni, sausage, bacon, and ham.",
+        "image": "https://www.jessicagavin.com/wp-content/uploads/2022/02/meat-lovers-pizza-28-1200.jpg",
+        "category": "pizza",
+        "price": 14.5
+    },   
+    {
+        "_id": "642c155b2c4774f05c36ee93p8",
+        "name": "Buffalo Chicken Pizza",
+        "recipe": " Buffalo sauce, mozzarella cheese, grilled chicken, red onions, and blue cheese crumbles",
+        "image": "https://hips.hearstapps.com/hmg-prod/images/190226-buffalo-chicken-pizza-370-1552084943.jpg",
+        "category": "pizza",
+        "price": 10.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee95p9",
+        "name": "Mediterranean Pizza",
+        "recipe": " Olive oil, mozzarella cheese, feta cheese, spinach, tomatoes, black olives, and oregano.",
+        "image": "https://img.sndimg.com/food/image/upload/q_92,fl_progressive,w_1200,c_scale/v1/img/recipes/33/97/3/picuhCf6Y.jpg",
+        "category": "pizza",
+        "price": 13.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9bp10",
+        "name": "White Pizza",
+        "recipe": "Olive oil or garlic sauce, mozzarella cheese, ricotta cheese, spinach, and garlic.",
+        "image": "https://www.tasteandtellblog.com/wp-content/uploads/2020/02/White-Pizza-Recipe-1.jpg",
+        "category": "pizza",
+        "price": 14.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9cp11",
+        "name": "Barbecue Pork Pizza",
+        "recipe": " Barbecue sauce, mozzarella cheese, pulled pork, red onions, and cilantro.",
+        "image": "https://2.bp.blogspot.com/-43YD4CXCTNM/W5l_frW9_QI/AAAAAAAAeL4/Wv3drGw4qPo_skxXxSzBBNsnU1Sz5A91QCLcBGAs/s1600/pulled-pork-pizza-2013x600.jpg",
+        "category": "pizza",
+        "price": 12.9
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee9dp12",
+        "name": "Supreme Pizza",
+        "recipe": " Tomato sauce, mozzarella cheese, pepperoni, sausage, bell peppers, mushrooms, onions, and olives",
+        "image": "https://tuscaneats.com/wp-content/uploads/2022/02/supreme-pizza.jpg",
+        "category": "pizza",
+        "price": 14.5
+    },
+     {
+        "_id": "642c155b2c4774f05c36ee98p13",
+        "name": "Cheese Pizza",
+        "recipe": "Tomato sauce, a blend of mozzarella, Parmesan, fontina, and gorgonzola cheeses.",
+        "image": "https://i.ytimg.com/vi/3Z6TCicRLhs/maxresdefault.jpg",
+        "category": "pizza",
+        "price": 12.9
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee89",
+        "name": "Churros Con Chocolate",
+        "recipe": "Fried dough pastry served with thick hot chocolate for dipping.",
+        "image": "https://www.justataste.com/wp-content/uploads/2013/03/homemade-churros-recipe.jpg",
+        "category": "dessert",
+        "price": 12.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8a",
+        "name": "Treacle tart",
+        "recipe": "A sweet pastry tart filled with a sticky mixture of golden syrup and breadcrumbs",
+        "image": "https://food-images.files.bbci.co.uk/food/recipes/treacletart_67656_16x9.jpg",
+        "category": "dessert",
+        "price": 13.5
+    },  
+    {
+        "_id": "642c155b2c4774f05c36ee87",
+        "name": "Crema Catalana",
+        "recipe": "Spanish dessert with a silky smooth custard base infused with citrus and cinnamon, topped with a caramelized layer of sugar that cracks upon gentle tapping",
+        "image": "https://cdn-rdb.arla.com/Files/arla-uk/723637141/d8b4f275-4ec4-4a0d-98c4-bbb538a5e9cf.jpg",
+        "category": "dessert",
+        "price": 15.5
+    },  {
+        "_id": "642c155b2c4774f05c36ee90",
+        "name": "Apple crumble",
+        "recipe": "Baked apple dessert topped with a crumbly mixture of flour, butter, and sugar.",
+        "image": "https://sallysbakingaddiction.com/wp-content/uploads/2021/11/individual-apple-crumbles.jpg",
+        "category": "dessert",
+        "price": 10.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8d",
+        "name": "Tiramisu",
+        "recipe": "Tiramisu is a classic Italian dessert featuring layers of coffee-soaked ladyfingers and creamy mascarpone cheese, dusted with cocoa powder",
+        "image": "https://images-gmi-pmc.edge-generalmills.com/b594252f-4aa7-4a23-aefe-ee1c78de131f.jpg",
+        "category": "dessert",
+        "price": 13.5
+    }, {
+        "_id": "642c155b2c4774f05c36ee8b",
+        "name": "Torrijas",
+        "recipe": "French toast, torrijas are slices of bread soaked in milk, eggs, and sugar, then fried and often flavored with cinnamon and honey",
+        "image": "https://img.theculturetrip.com/wp-content/uploads/2016/11/14407970897_6ddc25a192_k.jpg",
+        "category": "dessert",
+        "price": 13.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36ee8f",
+        "name": "Leche Frita",
+        "recipe": "Literally meaning - fried milk it's a creamy dessert made by frying milk custard and then coating it in sugar and cinnamon.",
+        "image": "https://www.tasteatlas.com/images/dishes/68c48a7952b44a1c887d9d885dbc172d.jpg",
+        "category": "dessert",
+        "price": 13.5
+    },    {
+        "_id": "642c155b2c4774f05c36ee91",
+        "name": "Banoffee pie",
+        "recipe": "A pie with a biscuit or pastry base, caramel, sliced bananas, and whipped cream.",
+        "image": "https://static01.nyt.com/images/2019/07/18/dining/ml-banoffee-pie/ml-banoffee-pie-superJumbo.jpg",
+        "category": "dessert",
+        "price": 14.5
+    },
+     {
+        "_id": "642c155b2c4774f05c36ee86",
+        "name": "Victoria sponge cake ",
+        "recipe": "A classic British sponge cake filled with jam and whipped cream.",
+        "image": "https://www.agaliving.com/sites/default/files/2022-11/Victoria%20Sandwich%20-%20Website.jpg",
+        "category": "dessert",
+        "price": 12.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeaas1",
+        "name": "Caesar Salad",
+        "recipe": "Romaine lettuce, croutons, Parmesan cheese, and Caesar dressing.",
+        "image": "https://www.recipetineats.com/wp-content/uploads/2016/05/Caesar-Salad_7-SQ.jpg",
+        "category": "salad",
+        "price": 14.7
+    },    {
+        "_id": "642c155b2c4774f05c36eea6s2",
+        "name": "Greek Salad",
+        "recipe": "Tomatoes, cucumbers, red onions, feta cheese, olives, and a lemon-oregano dressing",
+        "image": "https://www.cookingclassy.com/wp-content/uploads/2021/03/cobb-salad-18.jpg",
+        "category": "salad",
+        "price": 13.5
+    },   {
+        "_id": "642c155b2c4774f05c36eea4s3",
+        "name": "Cobb Salad",
+        "recipe": "Mixed greens, grilled chicken, bacon, hard-boiled eggs, avocado, tomatoes, and blue cheese dressing",
+        "image": "https://www.areinventedmom.com/wp-content/uploads/2020/07/Chicken-Cobb-Salad-Pin1-feat3.jpg",
+        "category": "salad",
+        "price": 13.5
+    },   {
+        "_id": "642c155b2c4774f05c36eea5s4",
+        "name": "Caprese Salad",
+        "recipe": "Fresh mozzarella, tomatoes, basil leaves, drizzled with balsamic glaze.",
+        "image": "https://feelgoodfoodie.net/wp-content/uploads/2017/03/Avocado-Caprese-Salad-5.jpg",
+        "category": "salad",
+        "price": 9.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea8s5",
+        "name": "Waldorf Salad",
+        "recipe": "Apples, celery, grapes, walnuts, and a creamy mayonnaise dressing",
+        "image": "https://www.foodiecrush.com/wp-content/uploads/2020/05/Waldorf-Salad-foodiecrush.com-010.jpg",
+        "category": "salad",
+        "price": 13.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36eea7s6",
+        "name": "Niçoise Salad",
+        "recipe": "Mixed greens, tuna, hard-boiled eggs, green beans, potatoes, and olives, with a Dijon vinaigrette.",
+        "image": "https://www.healthier.qld.gov.au/wp-content/uploads/2017/05/Nicoise-Salad-0001-640x420.jpg",
+        "category": "salad",
+        "price": 9.5
+    },   {
+        "_id": "642c155b2c4774f05c36eea9s7",
+        "name": "Thai Beef Salad",
+        "recipe": "Grilled beef, mixed greens, cucumbers, red onions, cilantro, and a spicy lime dressing.",
+        "image": "https://atastykitchen.com/wp-content/uploads/2022/10/Thai-beef-salad-5.jpg",
+        "category": "salad",
+        "price": 9.5
+    },  {
+        "_id": "642c155b2c4774f05c36eeacs8",
+        "name": "Spinach and Strawberry Salad",
+        "recipe": "Baby spinach, sliced strawberries, goat cheese, candied pecans, and a balsamic vinaigrette",
+        "image": "https://lifemadesweeter.com/wp-content/uploads/Strawberry-Spinach-Salad-Recipe-Photo-Picture-500x500.jpg",
+        "category": "salad",
+        "price": 14.5
+    },{
+        "_id": "642c155b2c4774f05c36eeabs9",
+        "name": "Mexican Corn Salad",
+        "recipe": "Grilled corn, black beans, red bell peppers, avocado, cilantro, and a lime-cumin dressing.",
+        "image": "https://www.jessicagavin.com/wp-content/uploads/2016/06/mexican-street-corn-salad-cheese-chipotle-dressing-1200.jpg",
+        "category": "salad",
+        "price": 14.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeafs1",
+        "name": "Tomato Soup",
+        "recipe": "Simmered tomatoes, onions, garlic, vegetable broth, and cream, blended to a smooth consistency.",
+        "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2020/11/tomato-soup-recipe-2-500x375.jpg",
+        "category": "soup",
+        "price": 12.5
+    },  {
+        "_id": "642c155b2c4774f05c36eeb0s2",
+        "name": "Chicken Noodle Soup",
+        "recipe": " Boiled chicken, egg noodles, carrots, celery, onions, and chicken broth, seasoned with herbs.",
+        "image": "https://www.cubesnjuliennes.com/wp-content/uploads/2022/01/Homemade-Chicken-Noodle-Soup-Recipe.jpg",
+        "category": "soup",
+        "price": 13.5
+    },  {
+        "_id": "642c155b2c4774f05c36eeb3s3",
+        "name": "Minestrone Soup",
+        "recipe": " Mixed vegetables (such as carrots, celery, beans, and tomatoes), pasta or rice, and vegetable broth, flavored with herbs and spices.",
+        "image": "https://cdn.loveandlemons.com/wp-content/uploads/2021/11/minestrone-soup-500x500.jpg",
+        "category": "soup",
+        "price": 9.5
+    },
+     {
+        "_id": "642c155b2c4774f05c36eeb6s5",
+        "name": "French Onion Soup",
+        "recipe": " Caramelized onions, beef broth, toasted bread, and melted cheese on top.",
+        "image": "https://www.africanbites.com/wp-content/uploads/2019/01/IMG_3868.jpg",
+        "category": "soup",
+        "price": 14.7
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeb8s6",
+        "name": "Potato Leek Soup",
+        "recipe": " Sauteed leeks, potatoes, vegetable broth, and cream, blended until creamy",
+        "image": "https://www.errenskitchen.com/wp-content/uploads/2020/10/Potato-Leek-Soup-recipe.jpg",
+        "category": "soup",
+        "price": 14.7
+    },  {
+        "_id": "642c155b2c4774f05c36eeb7s7",
+        "name": "Lentil Soup",
+        "recipe": " Lentils, vegetables (such as carrots, celery, and onions), and vegetable broth, seasoned with spices and herbs.",
+        "image": "https://www.unicornsinthekitchen.com/wp-content/uploads/2019/09/Turkish-Red-Lentil-Soup-Recipe-SQ.jpg",
+        "category": "soup",
+        "price": 9.5
+    }, {
+        "_id": "642c155b2c4774f05c36eeb4s8",
+        "name": "Pumpkin Soup",
+        "recipe": " Roasted pumpkin puree, vegetable broth, cream, and a blend of spices like cinnamon, nutmeg, and ginger.",
+        "image": "https://img.kidspot.com.au/Deav8vIG/w643-h428-cfill-q90/kk/2018/04/481-503664-1.jpg",
+        "category": "soup",
+        "price": 14.7
+    },  {
+        "_id": "642c155b2c4774f05c36eeb1s9",
+        "name": "Gazpacho Soup",
+        "recipe": " Cold soup made with blended tomatoes, cucumbers, bell peppers, onions, garlic, olive oil, and vinegar..",
+        "image": "https://www.recipetineats.com/wp-content/uploads/2023/01/Gazpacho_3.jpg",
+        "category": "soup",
+        "price": 9.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeads10",
+        "name": "Butternut Squash Soup",
+        "recipe": " Roasted butternut squash, onions, vegetable broth, cream, and a touch of nutmeg, blended until smooth.",
+        "image": "https://www.theseasonedmom.com/wp-content/uploads/2022/09/Roasted-Butternut-Squash-Soup-SQUARE-2-500x375.jpg",
+        "category": "soup",
+        "price": 14.5
+    },
+    {
+        "_id": "642c155b2c4774f05c36eeaes11",
+        "name": "Miso Soup",
+        "recipe": " Miso paste, tofu, seaweed, green onions, and dashi broth (made from dried bonito fish flakes and kelp).",
+        "image": "https://www.crowdedkitchen.com/wp-content/uploads/2020/08/vegan-miso-soup.jpg",
+        "category": "soup",
+        "price": 10.5
+    }
 ]

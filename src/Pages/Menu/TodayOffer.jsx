@@ -10,10 +10,10 @@ const TodayOffer = () => {
         fetch('offered.json')
         .then (res=> res.json())
         .then (data => {
-            // const offer = data.filter(dt => dt.category === "offered")
+            const offer = data.filter(dt => dt.category === "offered")
             // console.log(offer);
-            setOffers(data);
-            // console.log(data);
+            setOffers(offer);
+         
         })
     },[])
     return (

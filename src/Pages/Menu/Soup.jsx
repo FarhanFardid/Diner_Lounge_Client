@@ -7,13 +7,13 @@ import Btn from '../../Components/Btn';
 const Soup = () => {
     const [soups,setSoups] = useState([]);
     useEffect(()=>{
-        fetch('soup.json')
+        fetch('menu.json')
         .then (res=> res.json())
         .then (data => {
             // console.log(data)
-            // const soup =data.filter(dt=> dt.category === "soup")
-            // setSoups(soup)
-            setSoups(data)
+            const soup =data.filter(dt=> dt.category === "soup")
+            setSoups(soup)
+      
         })
     },[])
     return (

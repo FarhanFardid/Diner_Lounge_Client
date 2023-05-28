@@ -7,13 +7,14 @@ import Btn from "../../Components/Btn";
 const Menu = () => {
     const [menu,setMenu] = useState([]);
     useEffect(()=>{
-        fetch('popular.json')
+        fetch('menu.json')
         .then(res => res.json())
-        .then (data => {setMenu(data)
+        .then (data => {
             // console.log(data)
-            // const popular = data.filter(item => item.category === "popular")
+            const popular = data.filter(item => item.category === "popular");
+            setMenu(popular);
             // console.log(popular)
-            // console.log(data)
+            
             
         })
     },[])

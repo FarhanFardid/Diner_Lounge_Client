@@ -8,15 +8,15 @@ import dessertBan from '../../assets/menu/dessert-bg.jpeg'
 const Desserts = () => {
     const[desserts,setDesserts]= useState([]);
     useEffect(()=>{
-        fetch('dessert.json')
+        fetch('menu.json')
         .then(res=>res.json())
         .then(data => 
         {
             // console.log(data)
-            // const dessert = data.filter(dt=> dt.category === 'dessert')
-            // setDesserts(dessert)
+            const dessert = data.filter(dt=> dt.category === 'dessert')
+           
             // console.log(dessert);
-            setDesserts(data)
+            setDesserts(dessert)
         })
     },[])
     return (
