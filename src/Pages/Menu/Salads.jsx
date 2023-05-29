@@ -4,6 +4,7 @@ import CommonBanner from "../../Shared/CommonBanner";
 import ItemCard from "../../Shared/ItemCard";
 import saladBan from '../../assets/menu/salad-bg.jpg'
 import useMenu from "../../Hooks/useMenu";
+import { Link } from "react-router-dom";
 
 const Salads = () => {
     const [menu] = useMenu();
@@ -18,7 +19,7 @@ const Salads = () => {
           }
 
        </div>
-       <Btn btn="Order Your Favorite Food"></Btn>
+       <Link to="/order/salad"><Btn btn="Order Now"></Btn></Link>
   </div>
     );
 };

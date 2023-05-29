@@ -3,6 +3,7 @@ import SectionTitle from "../../Shared/SectionTitle";
 import ItemCard from "../../Shared/ItemCard";
 import Btn from "../../Components/Btn";
 import useMenu from "../../Hooks/useMenu";
+import { Link } from "react-router-dom";
 
 
 const TodayOffer = () => {
@@ -17,7 +18,7 @@ const TodayOffer = () => {
                     offers.map(offer=> <ItemCard key={offer._id} item={offer}></ItemCard> )
                 }
              </div>
-             <Btn btn="Order Your Favorite Food"></Btn>
+             <Link to="/order/special"><Btn btn="Order Now"></Btn></Link>
         </div>
     );
 };

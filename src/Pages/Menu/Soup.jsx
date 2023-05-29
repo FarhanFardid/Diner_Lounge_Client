@@ -4,6 +4,7 @@ import soupBan from '../../assets/menu/soup-bg.jpg'
 import ItemCard from '../../Shared/ItemCard';
 import Btn from '../../Components/Btn';
 import useMenu from '../../Hooks/useMenu';
+import { Link } from 'react-router-dom';
 
 const Soup = () => {
     const [menu] = useMenu();
@@ -18,7 +19,7 @@ const Soup = () => {
           }
 
        </div>
-       <Btn btn="Order Your Favorite Food"></Btn>
+       <Link to="/order/soup"><Btn btn="Order Now"></Btn></Link>
   </div>
     );
 };
