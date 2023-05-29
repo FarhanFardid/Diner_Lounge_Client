@@ -4,6 +4,7 @@ import pizzaBan from '../../assets/menu/pizza-bg.jpg'
 import ItemCard from "../../Shared/ItemCard";
 import Btn from "../../Components/Btn";
 import useMenu from "../../Hooks/useMenu";
+import { Link } from "react-router-dom";
 
 const Pizza = () => {
     const [menu] = useMenu();
@@ -17,7 +18,7 @@ const Pizza = () => {
                     pizzas.map(pizza=> <ItemCard key={pizza._id} item={pizza}></ItemCard> )
                 }
              </div>
-             <Btn btn="Order Your Favorite Food"></Btn>
+             <Link to="/order/pizza"><Btn btn="Order Now"></Btn></Link>
         </div>
     );
 };

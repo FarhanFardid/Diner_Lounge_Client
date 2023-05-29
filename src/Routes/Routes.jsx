@@ -17,15 +17,24 @@ import OrderFood from "../Pages/OrderFood/OrderFood";
         element:<Home></Home>
     },
     {
-      path:'/menu',
+      path:'menu',
       element:<Menu></Menu>
     },
+    // {
+    //   path: 'order',
+    //   element: <OrderFood></OrderFood>,
+    // },
     {
-      path: '/orderFood',
+      path: 'order/:category',
       element: <OrderFood></OrderFood>
     }
+      
+      ]
+     
+    }
+    
  ]
-  }
-])
+  
+)
 
 export default router;

@@ -6,8 +6,20 @@ import 'react-tabs/style/react-tabs.css';
 
 import FoodCard from "../../Shared/FoodCard";
 import useMenu from "../../Hooks/useMenu";
+import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 const OrderFood = () => {
+  
+ 
+  const categories =['pizza', 'soup', 'dessert', 'salad', 'special']
+  const {category} = useParams();
+  console.log(category);
+  console.log(typeof(category));
+  const initialIndex = categories.indexOf(category);
+ const[tabIndex,setTabIndex] = useState(initialIndex);
+
+  
   const [menu] = useMenu();
 
   const pizzas = menu.filter(food=> food.category === "pizza");
@@ -19,7 +31,7 @@ const OrderFood = () => {
   const salads = menu.filter(food=> food.category === "salad");
   // console.log(salads);
   const specials = menu.filter(food=> food.category === "offered" || food.category === "popular" );
-  console.log(specials);
+  // console.log(specials);
     return (
         <div>
              <Helmet>
@@ -29,7 +41,7 @@ const OrderFood = () => {
       <CommonBanner img={banner} size='big' content="Order Food Easily at Bistro Boss. Bringing convenience to your fingertips. With just a few taps, you can enjoy a delectable meal from their diverse menu" heading="Order Food"></CommonBanner>
 
       <div className="p-5 m-5">
-      <Tabs>
+      <Tabs selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)} >
     <TabList className="font-bold text-lg text-amber-700 text-center">
       <Tab >Pizzas</Tab>
       <Tab >Soups</Tab>

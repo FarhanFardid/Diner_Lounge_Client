@@ -8,7 +8,7 @@ import Salads from "./Salads";
 import { Helmet } from 'react-helmet-async';
 
 
-
+// To do pagination implement
 
 const Menu = () => {
     return (

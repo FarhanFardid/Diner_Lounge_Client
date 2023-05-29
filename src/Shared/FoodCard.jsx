@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Btn from "../Components/Btn";
 
+//  To Do: Food Details and Add to cart page redirects
 
 const FoodCard = ({item,display}) => {
     const {image,name,recipe,_id,price} = item;
@@ -24,7 +25,7 @@ const FoodCard = ({item,display}) => {
     
       { display === 'show' ?
        <><Link ><Btn btn="Add To Cart"> </Btn></Link> <Link ><Btn btn="View Details"> </Btn></Link>  </>  :
-      <Link ><Btn btn="View Details"> </Btn></Link> 
+      <Link to={`/foodDetails/:${_id}`} ><Btn btn="View Details"> </Btn></Link> 
       
       }
     </div>
