@@ -13,7 +13,7 @@ const Navigation = () => {
                
               </li>
               <li>
-              <Link to='/'> Our Shop </Link>
+              <Link to='/orderFood'> Order Food </Link>
                
               </li>
               <li>

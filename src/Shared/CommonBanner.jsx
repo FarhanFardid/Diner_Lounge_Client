@@ -1,9 +1,14 @@
 
-
+import { Parallax } from 'react-parallax';
 const CommonBanner = ({img, size,content,heading}) => {
     return (
-     
-        <div className="hero h-[700px]" style={{ backgroundImage: `url(${img})` }}>
+      <Parallax
+      blur={{ min: -18, max: 18 }}
+      bgImage={img}
+      bgImageAlt="Cover img"
+      strength={-200}
+  >
+      <div className="hero h-[700px]" >
         <div className="hero-overlay bg-opacity-30"></div>
         <div className="hero-content text-center text-neutral-content bg-black py-20 px-32 bg-opacity-40">
           <div className="max-w-md ">
@@ -13,6 +18,9 @@ const CommonBanner = ({img, size,content,heading}) => {
           </div>
         </div>
       </div>
+  </Parallax>
+     
+      
         
     );
 };

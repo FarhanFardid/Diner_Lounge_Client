@@ -5,12 +5,18 @@ import Pizza from "./Pizza";
 import Soup from "./Soup";
 import Desserts from "./Desserts";
 import Salads from "./Salads";
+import { Helmet } from 'react-helmet-async';
+
 
 
 
 const Menu = () => {
     return (
         <div>
+             <Helmet>
+        <title>Bistro Boss | Our Menu</title>
+       
+      </Helmet>
             <CommonBanner img={MenuBan} heading="Our Menu" content="Delight your taste buds at Bistro Boss: Where culinary excellence meets gastronomic bliss" size='big' ></CommonBanner>
            <TodayOffer></TodayOffer>
            <Pizza></Pizza>
