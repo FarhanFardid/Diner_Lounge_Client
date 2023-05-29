@@ -2,7 +2,7 @@
     {
         "_id": "642c155b2c4774f05c36ee81o1",
         "name": "Tuna Niçoise",
-        "recipe": "Fresh tuna, boiled potatoes, green beans, cherry tomatoes, boiled eggs, and olives combined in a vibrant salad, drizzled with a zesty vinaigrette—Tuna Nicoise, a delicious classic",
+        "recipe": "Fresh tuna, boiled potatoes, green beans, cherry tomatoes, boiled eggs, and olives combined in a vibrant salad, drizzled with a zesty vinaigrette.",
         "image": "https://www.familyfoodonthetable.com/wp-content/uploads/2023/01/Tuna-nicoise-salad-1200-11-720x720.jpg",
         "category": "offered",
         "price": 10.5
@@ -10,7 +10,7 @@
     {
         "_id": "642c155b2c4774f05c36ee83o2",
         "name": "Chicken and Walnut Salad",
-        "recipe": "Tender grilled chicken, crunchy walnuts, crisp lettuce, juicy grapes, and tangy dressing come together in a delightful Chicken Walnut Salad, a perfect balance of flavors and textures",
+        "recipe": "Tender grilled chicken, crunchy walnuts, crisp lettuce, juicy grapes, and tangy dressing come together in a delightful Chicken Walnut Salad.",
         "image": "https://www.cookingclassy.com/wp-content/uploads/2013/11/chicken-apple-bacon-walnut-salad3-edit+srgb.-475x500.jpg",
         "category": "offered",
         "price": 13.5

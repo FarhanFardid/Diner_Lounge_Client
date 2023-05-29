@@ -22,7 +22,7 @@ const Recommends = () => {
             <SectionTitle heading="Chef Recommends" subHeading="Should Try" ></SectionTitle>
             <div className="grid grid-cols-3 gap-2 ">
                 {
-                    menu.map(mi => <FoodCard mi={mi} key={mi._id}></FoodCard>)
+                    menu.map(mi => <FoodCard item={mi} key={mi._id}></FoodCard>)
                 }
             </div>
 

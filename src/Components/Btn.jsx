@@ -2,8 +2,8 @@
 
 const Btn = ({btn}) => {
     return (
-        <div className="bg-slate-100 w-fit mx-auto text-center p-2 rounded-md mb-5 border-b-4  border-black">
-            <button className="font-bold  ">{btn} </button>
+        <div className=" w-fit mx-auto text-center ">
+            <button className="font-bold btn-outline p-2 rounded-md mb-5 border-0 border-b-2  border-black bg-slate-100 ">{btn} </button>
         </div>
     );
 };

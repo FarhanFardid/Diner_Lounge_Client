@@ -7,7 +7,7 @@ import Btn from "../../Components/Btn";
 const TodayOffer = () => {
     const [offers,setOffers] = useState([]);
     useEffect(()=>{
-        fetch('offered.json')
+        fetch('menu.json')
         .then (res=> res.json())
         .then (data => {
             const offer = data.filter(dt => dt.category === "offered")

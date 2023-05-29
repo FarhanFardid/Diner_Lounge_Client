@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import SectionTitle from "../../Shared/SectionTitle";
 import ItemCard from "../../Shared/ItemCard";
 import Btn from "../../Components/Btn";
+import { Link } from "react-router-dom";
 
 
 const Menu = () => {
@@ -27,7 +28,7 @@ const Menu = () => {
                     menu.map(item => <ItemCard key={item._id} item={item}></ItemCard>)
                 }
         </div>
-        <Btn btn="View Full Menu"></Btn>
+        <Link to='/menu' ><Btn btn="View Full Menu"></Btn></Link>
         </div>
 
     );
