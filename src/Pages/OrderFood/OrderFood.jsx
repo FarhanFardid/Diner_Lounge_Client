@@ -3,27 +3,22 @@ import CommonBanner from "../../Shared/CommonBanner";
 import banner from '../../assets/shop/banner2.jpg'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { useEffect, useState } from "react";
+
 import FoodCard from "../../Shared/FoodCard";
+import useMenu from "../../Hooks/useMenu";
 
 const OrderFood = () => {
-  const [foods,setFoods] = useState([]);
-  useEffect(()=>{
-    fetch ('menu.json')
-    .then(res=> res.json())
-    .then(data=> setFoods(data))
-  },[])
-  console.log(foods);
+  const [menu] = useMenu();
 
-  const pizzas = foods.filter(food=> food.category === "pizza");
+  const pizzas = menu.filter(food=> food.category === "pizza");
   // console.log(pizzas);
-  const soups = foods.filter(food=> food.category === "soup");
+  const soups = menu.filter(food=> food.category === "soup");
   // console.log(soups);
-  const desserts = foods.filter(food=> food.category === "dessert");
+  const desserts = menu.filter(food=> food.category === "dessert");
   // console.log(desserts);
-  const salads = foods.filter(food=> food.category === "salad");
+  const salads = menu.filter(food=> food.category === "salad");
   // console.log(salads);
-  const specials = foods.filter(food=> food.category === "offered" || food.category === "popular" );
+  const specials = menu.filter(food=> food.category === "offered" || food.category === "popular" );
   console.log(specials);
     return (
         <div>

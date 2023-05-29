@@ -1,21 +1,14 @@
-import { useEffect, useState } from "react";
+
 import SectionTitle from "../../Shared/SectionTitle";
 import ItemCard from "../../Shared/ItemCard";
 import Btn from "../../Components/Btn";
+import useMenu from "../../Hooks/useMenu";
 
 
 const TodayOffer = () => {
-    const [offers,setOffers] = useState([]);
-    useEffect(()=>{
-        fetch('menu.json')
-        .then (res=> res.json())
-        .then (data => {
-            const offer = data.filter(dt => dt.category === "offered")
-            // console.log(offer);
-            setOffers(offer);
-         
-        })
-    },[])
+    const [menu] = useMenu();
+
+    const offers = menu.filter(dt=> dt.category === 'offered')
     return (
         <div>
              <SectionTitle heading="Today's Offer" subHeading="Don't miss"></SectionTitle>

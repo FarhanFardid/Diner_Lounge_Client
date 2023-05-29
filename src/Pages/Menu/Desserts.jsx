@@ -1,24 +1,15 @@
-import { useEffect, useState } from "react";
+
 import Btn from "../../Components/Btn";
 import CommonBanner from "../../Shared/CommonBanner";
 import ItemCard from "../../Shared/ItemCard";
 import dessertBan from '../../assets/menu/dessert-bg.jpeg'
+import useMenu from "../../Hooks/useMenu";
 
 
 const Desserts = () => {
-    const[desserts,setDesserts]= useState([]);
-    useEffect(()=>{
-        fetch('menu.json')
-        .then(res=>res.json())
-        .then(data => 
-        {
-            // console.log(data)
-            const dessert = data.filter(dt=> dt.category === 'dessert')
-           
-            // console.log(dessert);
-            setDesserts(dessert)
-        })
-    },[])
+    const [menu] = useMenu();
+
+    const desserts = menu.filter(dt=> dt.category === 'dessert')
     return (
         <div>
         <CommonBanner img={dessertBan} heading="Desserts" content="Indulge your sweet tooth at Bistro Boss: Our heavenly desserts menu is a symphony of decadent delights, featuring irresistible cakes, velvety mousses, and divine confections that will transport you to a state of dessert euphoria" size = "null" ></CommonBanner>

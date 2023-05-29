@@ -1,21 +1,14 @@
-import { useEffect, useState } from "react";
+
 import CommonBanner from "../../Shared/CommonBanner";
 import pizzaBan from '../../assets/menu/pizza-bg.jpg'
 import ItemCard from "../../Shared/ItemCard";
 import Btn from "../../Components/Btn";
+import useMenu from "../../Hooks/useMenu";
 
 const Pizza = () => {
-    const[pizzas,setPizzas] = useState([]);
-    useEffect(()=>{
-        fetch('menu.json')
-        .then (res=> res.json())
-        .then(data=> {
-            const pizza = data.filter(pi=> pi.category === "pizza")
-            // // console.log(pizza)
-            setPizzas(pizza)
-           
-        })
-    },[])
+    const [menu] = useMenu();
+
+    const pizzas = menu.filter(dt=> dt.category === 'pizza')
     return (
         <div>
               <CommonBanner img={pizzaBan} heading="Pizzas" content="Experience pizza perfection at Bistro Boss: Our mouthwatering pizza menu brings together artisanal crusts, premium toppings, and tantalizing flavors, delivering a slice of pure satisfaction with every bite." size = "null" ></CommonBanner>

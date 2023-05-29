@@ -1,22 +1,14 @@
-import { useEffect, useState } from "react";
+
 import Btn from "../../Components/Btn";
 import CommonBanner from "../../Shared/CommonBanner";
 import ItemCard from "../../Shared/ItemCard";
 import saladBan from '../../assets/menu/salad-bg.jpg'
+import useMenu from "../../Hooks/useMenu";
 
 const Salads = () => {
-    const [salads,setSalads] = useState([]);
-    useEffect(()=>{
-        fetch('menu.json')
-        .then(res => res.json())
-        .then (data => {
-            // console.log(data);
-            const salad = data.filter(dt=> dt.category === 'salad');
-            setSalads(salad)
-            // console.log(salad);
-            
-        })
-    },[])
+    const [menu] = useMenu();
+
+    const salads = menu.filter(dt=> dt.category === 'salad')
     return (
         <div>
         <CommonBanner img={saladBan} heading="Salads" content="Elevate your greens game at Bistro Boss: Our vibrant salads menu showcases a medley of farm-fresh ingredients, crisp vegetables, and delightful dressings, delivering a burst of flavors and wholesome goodness in every refreshing bite" size = "null" ></CommonBanner>

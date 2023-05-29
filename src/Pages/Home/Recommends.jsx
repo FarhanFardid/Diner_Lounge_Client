@@ -1,28 +1,19 @@
-import { useEffect, useState } from "react";
+
 import SectionTitle from "../../Shared/SectionTitle";
 import FoodCard from "../../Shared/FoodCard";
+import useMenu from "../../Hooks/useMenu";
 
 
 const Recommends = () => {
-    const [menu,setMenu] = useState([]);
-    useEffect(()=>{
-        fetch('menu.json')
-        .then(res => res.json())
-        .then (data => {
-            // console.log(data)
-            const recommends = data.slice(0,3)
-            console.log(recommends)
-            setMenu(recommends)
-            
-        })
-    },[])
-    console.log(menu)
+    const [menu] = useMenu();
+
+    const recommends = menu.slice(0,3)
     return (
         <div>
             <SectionTitle heading="Chef Recommends" subHeading="Should Try" ></SectionTitle>
             <div className="grid grid-cols-3 gap-2 ">
                 {
-                    menu.map(mi => <FoodCard item={mi} key={mi._id}></FoodCard>)
+                    recommends.map(item => <FoodCard item={item} key={item._id}></FoodCard>)
                 }
             </div>
 
