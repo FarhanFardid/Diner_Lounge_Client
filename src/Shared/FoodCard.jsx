@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import Btn from "../Components/Btn";
 
 
 const FoodCard = ({item,display}) => {
     const {image,name,recipe,_id,price} = item;
-    console.log(price, display);
+    // console.log(price, display);
 
     return (
         <div>
@@ -22,8 +23,8 @@ const FoodCard = ({item,display}) => {
     <div className="card-actions   bottom-1 my-1   ">
     
       { display === 'show' ?
-        <button ><Btn btn="Add To Cart"> </Btn></button> :
-      <button ><Btn btn="View Details"> </Btn></button> 
+       <><Link ><Btn btn="Add To Cart"> </Btn></Link> <Link ><Btn btn="View Details"> </Btn></Link>  </>  :
+      <Link ><Btn btn="View Details"> </Btn></Link> 
       
       }
     </div>

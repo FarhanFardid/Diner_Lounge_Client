@@ -11,7 +11,7 @@
         "_id": "642c155b2c4774f05c36ee83o2",
         "name": "Chicken and Walnut Salad",
         "recipe": "Tender grilled chicken, crunchy walnuts, crisp lettuce, juicy grapes, and tangy dressing come together in a delightful Chicken Walnut Salad.",
-        "image": "https://www.cookingclassy.com/wp-content/uploads/2013/11/chicken-apple-bacon-walnut-salad3-edit+srgb.-475x500.jpg",
+        "image": "https://www.framedcooks.com/wp-content/uploads/2017/08/844863607_CUQy5-M.jpg",
         "category": "offered",
         "price": 13.5
     },
@@ -33,17 +33,17 @@
     },
     {
         "_id": "642c155b2c4774f05c36ee7cp1",
-        "name": "Escalope de Veau",
-        "recipe": "Escalope de Veau is a classic dish made by coating thinly sliced veal in breadcrumbs, then frying it until golden brown and crispy, resulting in a tender and flavorful meat dish.",
-        "image": "https://www.finedininglovers.fr/sites/g/files/xknfdk1291/files/styles/recipes_1200_800_fallback/public/fdl_content_import_scripts/Original_165_scaloppine-milanesi-escalopes-veau-panees_0.jpg?itok=WLr99VOQ",
+        "name": " Ropa Vieja",
+        "recipe": "Ropa Vieja is a traditional Spanish beef dish that recipe features tender shredded beef cooked with aromatic spices, bell peppers, onions, and tomatoes.",
+        "image": "https://www.daringgourmet.com/wp-content/uploads/2016/06/Ropa-Vieja-prep-17-edited-1024x682.jpg",
         "category": "popular",
         "price": 11.5
     },
     {
         "_id": "642c155b2c4774f05c36ee7ap2",
-        "name": "Roast Duck Breast",
-        "recipe": "Roasted duck breast (served pink) with gratin potato and a griottine cherry sauce",
-        "image": "https://img.taste.com.au/ZBfq03Py/taste/2016/11/roast-duck-breast-with-fig-and-anchovy-salsa-89065-1.jpeg",
+        "name": "Pollo al Ajillo",
+        "recipe": "Pollo al Ajillo is a classic Spanish chicken dish. Tender chicken pieces are marinated in a garlic-infused sauce, then pan-fried until golden and cooked through.",
+        "image": "https://cookingit.co.uk/wp-content/uploads/2015/12/image2.jpeg",
         "category": "popular",
         "price": 13.5
     },

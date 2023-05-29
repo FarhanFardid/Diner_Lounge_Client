@@ -16,13 +16,15 @@ const OrderFood = () => {
   console.log(foods);
 
   const pizzas = foods.filter(food=> food.category === "pizza");
-  console.log(pizzas);
+  // console.log(pizzas);
   const soups = foods.filter(food=> food.category === "soup");
-  console.log(soups);
+  // console.log(soups);
   const desserts = foods.filter(food=> food.category === "dessert");
-  console.log(desserts);
+  // console.log(desserts);
   const salads = foods.filter(food=> food.category === "salad");
-  console.log(salads);
+  // console.log(salads);
+  const specials = foods.filter(food=> food.category === "offered" || food.category === "popular" );
+  console.log(specials);
     return (
         <div>
              <Helmet>
@@ -38,6 +40,7 @@ const OrderFood = () => {
       <Tab >Soups</Tab>
       <Tab >Desserts</Tab>
       <Tab >Salads</Tab>
+      <Tab >Specials</Tab>
     </TabList>
 
     <TabPanel>
@@ -66,6 +69,13 @@ const OrderFood = () => {
     <div className="grid grid-cols-3 gap-2">
         {
           salads.map(salad => <FoodCard key={salad._id} item={salad} display='show'></FoodCard>)
+        }
+      </div>
+    </TabPanel>
+ <TabPanel>
+    <div className="grid grid-cols-3 gap-2">
+        {
+          specials.map(special => <FoodCard key={special._id} item={special} display='show'></FoodCard>)
         }
       </div>
     </TabPanel>
