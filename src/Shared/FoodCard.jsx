@@ -24,8 +24,8 @@ const FoodCard = ({item,display}) => {
     <div className="card-actions   bottom-1 my-1   ">
     
       { display === 'show' ?
-       <><Link ><Btn btn="Add To Cart"> </Btn></Link> <Link ><Btn btn="View Details"> </Btn></Link>  </>  :
-      <Link to={`/foodDetails/:${_id}`} ><Btn btn="View Details"> </Btn></Link> 
+       <><Link to={`/addToCart/${_id}`} ><Btn btn="Add To Cart"> </Btn></Link> <Link ><Btn btn="View Details"> </Btn></Link>  </>  :
+      <Link to="/order/special" ><Btn btn="Order Now"> </Btn></Link> 
       
       }
     </div>
