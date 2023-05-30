@@ -7,7 +7,7 @@ const Login = () => {
   return (
     <div>
       <div
-        className="hero h-[400px]"
+        className="hero h-[550px]"
         style={{ backgroundImage: `url(${loginBanner})` }}
       >
         <div className="hero-overlay bg-opacity-50"></div>
@@ -53,9 +53,9 @@ const Login = () => {
               <div>
                 <p className="font-bold text-lg text-center">Or Sign In with</p>
                 <div className="flex justify-center py-3">
-                    <button className="p-1 m-2 btn btn-circle hover:bg-slate-200 bg-white text-blue-700 text-2xl"><FaFacebook/></button>
-                    <button className="p-1 m-2 btn btn-circle hover:bg-slate-200 bg-white text-green-800 text-2xl"><FaGoogle/></button>
-                    <button className="p-1 m-2 btn btn-circle hover:bg-slate-200 bg-white text-gray-900 text-2xl"><FaGithub/></button>
+                    <button className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaFacebook/></button>
+                    <button className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaGoogle/></button>
+                    <button className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaGithub/></button>
                 </div>
               </div>
             </div>
