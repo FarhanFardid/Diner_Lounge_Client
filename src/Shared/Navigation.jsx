@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom';
 import logo from '../assets/icon/logo.png'
+import { Tooltip } from '@mui/material';
 
 const Navigation = () => {
     const user = null;
+    const handleLogout =()=>{
+
+    }
     const navOptions  = <>
      <li>
                <Link to="/"> Home</Link>
@@ -17,7 +21,7 @@ const Navigation = () => {
                
               </li>
               <li>
-              <Link to='/'> Contact Us </Link>
+              <Link to='/contact'> Contact Us </Link>
                
               </li>
   
@@ -67,13 +71,13 @@ const Navigation = () => {
           </ul>
         </div>
         <div className="navbar-end">
-   {/* {
+   {
           user? <>    <Tooltip title={user?.displayName}>
           <img src={user?.photoURL} alt="User profile" className='md:w-12 md:h-12 w-8 h-8 rounded-full mr-3' />
         </Tooltip>
          <Link ><button className="btn btn-xs md:btn-lg bg-red-700" onClick={handleLogout}>Logout</button></Link> </>:
           <Link to="/login"><button className="btn bg-red-700 hover:bg-blue-700" >Login</button></Link>
-         } */}
+         }
         
         </div>
       </div>
