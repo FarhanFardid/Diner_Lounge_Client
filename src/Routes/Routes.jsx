@@ -20,10 +20,10 @@ import OrderFood from "../Pages/OrderFood/OrderFood";
       path:'menu',
       element:<Menu></Menu>
     },
-    // {
-    //   path: 'order',
-    //   element: <OrderFood></OrderFood>,
-    // },
+    {
+      path: 'order',
+      element: <OrderFood></OrderFood>,
+    },
     {
       path: 'order/:category',
       element: <OrderFood></OrderFood>

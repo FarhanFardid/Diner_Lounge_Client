@@ -14,12 +14,19 @@ const OrderFood = () => {
  
   const categories =['pizza', 'soup', 'dessert', 'salad', 'special']
   const {category} = useParams();
-  console.log(category);
-  console.log(typeof(category));
-  const initialIndex = categories.indexOf(category);
- const[tabIndex,setTabIndex] = useState(initialIndex);
+  let startIndex;
+  // console.log(category);
+  let initialIndex = categories.indexOf(category);
+  // console.log(initialIndex);
+  if(initialIndex < 0){
+     startIndex = 0;
+  }
+  else{
+      startIndex = initialIndex
+  }
+  // console.log(startIndex)
+ const[tabIndex,setTabIndex] = useState(startIndex);
 
-  
   const [menu] = useMenu();
 
   const pizzas = menu.filter(food=> food.category === "pizza");
