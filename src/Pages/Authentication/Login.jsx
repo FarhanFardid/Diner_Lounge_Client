@@ -3,9 +3,13 @@ import loginBanner from "../../assets/others/authentication.gif";
 import authImg from "../../assets/others/authentication1.png";
 import { FaGoogle,FaFacebook,FaGithub } from 'react-icons/fa';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
+  const { userSignIn,google,github} = useContext(AuthContext);
 
     const captchaRef = useRef(null);
     const [disable,setDisable] = useState(true)
@@ -28,7 +32,47 @@ const Login = () => {
             const email = form.email.value;
             const password = form.password.value;
             console.log(email,password);
+            userSignIn(email,password)
+            .then(res=>{
+              const loggedUser = res.user;
+              form.reset()
+              toast.success("Successfully Signed In")
+              console.log(loggedUser);
+            })
+            .catch(error=> {
+              console.log(error);
+              toast.error("Sign In Failed")
+            })
 
+         }
+         const googleHandle = () =>{
+          google()
+          .then(res =>{
+            const createdUser = res.user; 
+            toast.success("Successfully Signed In")
+            console.log(createdUser);
+          } )
+          .catch(error=> {
+            console.log(error);
+            toast.error("Sign In Failed")
+          })
+        }
+          const githubHandle = () =>{
+            github()
+            .then(res =>{
+              const createdUser = res.user; 
+              toast.success("Successfully Signed In")
+              console.log(createdUser);
+            } )
+            .catch(error=> {
+              console.log(error);
+              toast.error("Sign In Failed")
+            })
+           
+         
+        }
+        const fbHandle = () =>{
+          toast.warning("Facebook Integration will implement soon..... ")
          }
   return (
     <div>
@@ -89,16 +133,17 @@ const Login = () => {
                 
                 <input type="submit" disabled={disable}  className="btn bg-[#D1A054]" value="Sign In" />
               </div>
+              </form>
               <p className="text-center font-medium py-2">New to Bistro Boss?<Link to='/register' className="text-blue-700 font-bold"> Sign Up</Link></p>
               <div>
                 <p className="font-bold text-lg text-center">Or Sign In with</p>
                 <div className="flex justify-center py-3">
-                    <button className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaFacebook/></button>
-                    <button className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaGoogle/></button>
-                    <button className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaGithub/></button>
+                    <button onClick={fbHandle} className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaFacebook/></button>
+                    <button onClick={googleHandle} className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaGoogle/></button>
+                    <button onClick={githubHandle} className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaGithub/></button>
                 </div>
               </div>
-            </form>
+          
           </div>
         </div>
       </div>

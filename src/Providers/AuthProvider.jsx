@@ -1,5 +1,5 @@
-import { createContext, useState} from "react";
-import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createContext, useEffect, useState} from "react";
+import {  GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import app from "../Firebase/firebase.config";
 
 
@@ -9,6 +9,10 @@ const[user,setUser] = useState(null);
 const[loading,setLoading] = useState(true);
 
     const auth = getAuth(app);
+    const googleProvider = new GoogleAuthProvider();
+    const githubProvider = new GithubAuthProvider();
+    // const fbProvider = new FacebookAuthProvider();
+
   
     const createUser=(email,password)=>
     {
@@ -17,18 +21,53 @@ const[loading,setLoading] = useState(true);
 
     }
     const userSignIn =(email,password) =>{
+        setLoading(false)
         return signInWithEmailAndPassword(auth,email,password)
     } 
+    const userUpdate = (user,name,photo)=>{
+        setLoading(false)
+       return updateProfile(user, {
+            displayName: name , photoURL: photo
+          })
+    }
+    const google=()=>{
+        setLoading(false)
+        return signInWithPopup(auth,googleProvider)
+
+    }
+    const github=() =>{
+        setLoading(false)
+        return signInWithPopup(auth,githubProvider)
+    }
+    // const facebook=()=>{
+    //     setLoading(false)
+    //     return signInWithPopup(auth,fbProvider)
+    // }
 
     const logOut = () =>{
         return signOut(auth)
     }
     const authInfo={
         user,
-        loading,createUser,userSignIn,logOut
+        loading,
+        createUser,
+        userSignIn,
+        logOut,
+        userUpdate,
+        google,
+        github,
 
     }
+   useEffect(()=>{
+    const unsubscribe = onAuthStateChanged(auth,currentUser=>{
+        setUser(currentUser);
+        setLoading(false);
 
+    });
+    return ()=>{
+        unsubscribe();
+    }
+   },[])
 
     return (
         <AuthContext.Provider value={authInfo}>

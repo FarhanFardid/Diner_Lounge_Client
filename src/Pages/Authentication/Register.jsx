@@ -2,8 +2,63 @@ import { Link } from "react-router-dom";
 import loginBanner from "../../assets/others/authentication.gif";
 import authImg from "../../assets/others/authentication1.png";
 import { FaGoogle,FaFacebook,FaGithub } from 'react-icons/fa';
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
+  const {createUser,userUpdate,google,github} = useContext(AuthContext);
+  const handleSignUp = event =>{
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const photo = form.photo.value;
+    const password = form.password.value;
+    console.log(name,email,password);
+    createUser(email,password)
+    .then(res =>{
+      const createdUser = res.user;
+      form.reset();
+      userUpdate(createdUser,name,photo)
+      toast.success("Successfully Signed Up")
+      console.log(createdUser);
+    } )
+    .catch(error=> {
+      console.log(error);
+      toast.error("Sign Up Failed")
+    })
+  }
+  const googleHandle = () =>{
+    google()
+    .then(res =>{
+      const createdUser = res.user; 
+      toast.success("Successfully Signed Up")
+      console.log(createdUser);
+    } )
+    .catch(error=> {
+      console.log(error);
+      toast.error("Sign Up Failed")
+    })
+  }
+    const githubHandle = () =>{
+      github()
+      .then(res =>{
+        const createdUser = res.user; 
+        toast.success("Successfully Signed Up")
+        console.log(createdUser);
+      } )
+      .catch(error=> {
+        console.log(error);
+        toast.error("Sign Up Failed")
+      })
+     
+   
+  }
+  const fbHandle = () =>{
+    toast.warning("Facebook Integration will implement soon ")
+   }
     return (
         <div>
       <div
@@ -23,7 +78,7 @@ const Register = () => {
             <img src={authImg} alt="Auth Img" className="w-full" />
           </div>
           <div className="card w-full  shadow-2xl bg-base-300 m-8">
-            <div className="card-body m-8">
+            <form onSubmit={handleSignUp} className="card-body m-8">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text font-bold">Name</span>
@@ -48,6 +103,17 @@ const Register = () => {
               </div>
               <div className="form-control">
                 <label className="label">
+                  <span className="label-text font-bold">Photo URL</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Enter photo url"
+                  name="photo"
+                  className="input input-bordered"
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
                   <span className="label-text font-bold">Password</span>
                 </label>
                 <input
@@ -58,18 +124,20 @@ const Register = () => {
                 />
               </div>
               <div className="form-control mt-6">
-                <button className="btn bg-[#D1A054]">sign Up</button>
+               
+                <input className="btn bg-[#D1A054]" type="submit" value="Sign Up" />
               </div>
+              </form>
               <p className="text-center font-medium py-2">Already have Bistro Boss Account?<Link to='/login' className="text-blue-700 font-bold"> Sign In</Link></p>
               <div>
                 <p className="font-bold text-lg text-center">Or Sign Up with</p>
                 <div className="flex justify-center py-3">
-                    <button className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaFacebook/></button>
-                    <button className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaGoogle/></button>
-                    <button className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaGithub/></button>
+                    <button onClick={fbHandle} className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaFacebook/></button>
+                    <button onClick={googleHandle} className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaGoogle/></button>
+                    <button onClick={githubHandle} className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaGithub/></button>
                 </div>
               </div>
-            </div>
+            
           </div>
         </div>
       </div>
