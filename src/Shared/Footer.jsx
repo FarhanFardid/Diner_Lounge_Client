@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
         <div className="footer__address items-center justify-center flex flex-col space-y-2">
           <h3 className="font-bold text-red-600 text-base">Address</h3>
-          <p className='text-xs font-medium'>24/B Baker Street, London, UK</p>
+          <p className='text-xs font-medium'>221/B Baker Street, London, UK</p>
         </div>
         <div className="md:mt-5 col-span-4 text-center">
           <p className="font-bold text-white  text-lg ">&copy; {new Date().getFullYear()} Bistro Boss Restaurant. All rights reserved.</p>
