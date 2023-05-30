@@ -1,5 +1,5 @@
 import SectionTitle from "../../Shared/SectionTitle";
-
+import { FaLocationArrow } from 'react-icons/fa';
 
 const ContactForm = () => {
     return (
@@ -37,7 +37,7 @@ const ContactForm = () => {
           <textarea rows="10"  type="text" placeholder="Write your Message here" className="input input-bordered" />
         </div>
         <div className="form-control mt-6 col-span-2 w-44 mx-auto">
-          <button className="btn bg-[#D1A054]">Send Message</button>
+          <button className="btn bg-[#D1A054]">Send Message<FaLocationArrow className="m-2"/> </button>
         </div>
             </div>
            
