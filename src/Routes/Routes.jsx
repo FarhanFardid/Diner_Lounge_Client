@@ -26,7 +26,7 @@ import PrivateRoutes from "./PrivateRoutes";
     },
     {
       path: 'order',
-      element: <PrivateRoutes><OrderFood></OrderFood></PrivateRoutes>,
+      element: <OrderFood></OrderFood>
     },
     {
       path: 'order/:category',
