@@ -9,6 +9,7 @@ import OrderFood from "../Pages/OrderFood/OrderFood";
 import Login from "../Pages/Authentication/Login";
 import ContactUs from "../Pages/ContactUs/ContactUs";
 import Register from "../Pages/Authentication/Register";
+import PrivateRoutes from "./PrivateRoutes";
 
   const router = createBrowserRouter([
     {
@@ -25,7 +26,7 @@ import Register from "../Pages/Authentication/Register";
     },
     {
       path: 'order',
-      element: <OrderFood></OrderFood>,
+      element: <PrivateRoutes><OrderFood></OrderFood></PrivateRoutes>,
     },
     {
       path: 'order/:category',

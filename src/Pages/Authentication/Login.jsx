@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import loginBanner from "../../assets/others/authentication.gif";
 import authImg from "../../assets/others/authentication1.png";
 import { FaGoogle,FaFacebook,FaGithub } from 'react-icons/fa';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,13 +12,15 @@ import { Helmet } from "react-helmet-async";
 const Login = () => {
   const { userSignIn,google,github} = useContext(AuthContext);
 
-    const captchaRef = useRef(null);
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || '/'
     const [disable,setDisable] = useState(true)
     useEffect(()=>{
         loadCaptchaEnginge(6);
     },[])
-    const handleCaptcha = ()=>{
-        const user_captcha_value = captchaRef.current.value;
+    const handleCaptcha = (e)=>{
+        const user_captcha_value = e.target.value;
         console.log(user_captcha_value);
         if (validateCaptcha(user_captcha_value)){
            setDisable(false)
@@ -38,6 +40,7 @@ const Login = () => {
               const loggedUser = res.user;
               form.reset()
               toast.success("Successfully Signed In")
+              navigate(from, {replace:true})
               console.log(loggedUser);
             })
             .catch(error=> {
@@ -129,12 +132,12 @@ const Login = () => {
                 </label>
                 <input
                   type="text"
-                  ref={captchaRef}
+                 onBlur={handleCaptcha}
                   placeholder="Type the text above"
                   name="captcha"
                   className="input input-bordered"
                 />
-                <button onClick={handleCaptcha} className="btn btn-xs btn-primary my-2">Validate Captcha</button>
+              
               </div>
               <div className="form-control mt-6">
                 

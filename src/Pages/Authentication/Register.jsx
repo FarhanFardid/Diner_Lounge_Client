@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const {createUser,userUpdate,google,github} = useContext(AuthContext);
-  const { register, handleSubmit,formState: { errors } } = useForm();
+  const { register, handleSubmit,reset, formState: { errors } } = useForm();
   const onSubmit = data => {
     console.log(data)
     createUser(data.email,data.password)
@@ -19,6 +19,7 @@ const Register = () => {
       const createdUser = res.user;
       userUpdate(createdUser,data.name,data.photo)
       toast.success("Successfully Signed Up")
+      reset()
       console.log(createdUser);
     } )
     .catch(error=> {
