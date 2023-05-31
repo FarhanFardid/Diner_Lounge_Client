@@ -6,9 +6,11 @@ import { AuthContext } from "../Providers/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FaShoppingCart} from 'react-icons/fa';
+import useCart from "../Hooks/useCart";
 
 const Navigation = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [cart] = useCart();
 
   const handleLogout = () => {
     logOut()
@@ -40,7 +42,7 @@ const Navigation = () => {
        
        <button className="btn bg-transparent gap-2">
          Cart <FaShoppingCart/>
-         <div className="badge badge-info">+0</div>
+         <div className="badge badge-info">+{cart?.length}</div>
        </button>
      </Link></li> 
 

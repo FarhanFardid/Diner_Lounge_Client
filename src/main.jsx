@@ -10,9 +10,7 @@ import router from './Routes/Routes.jsx';
 import AuthProvider from './Providers/AuthProvider';
 import { ToastContainer } from 'react-toastify';
 import {
-  useQuery,
-  useMutation,
-  useQueryClient,
+
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'

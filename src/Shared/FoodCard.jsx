@@ -3,6 +3,7 @@ import Btn from "../Components/Btn";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import useCart from "../Hooks/useCart";
 
 
 //  To Do: Food Details and Add to cart page redirects
@@ -10,6 +11,7 @@ import Swal from "sweetalert2";
 const FoodCard = ({ item, display }) => {
   const { image, name, recipe, price,_id } = item;
   const { user } = useContext(AuthContext);
+  const [, refetch] = useCart();
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -26,8 +28,10 @@ const FoodCard = ({ item, display }) => {
       })
         .then((res) => res.json())
         .then((data) => {
+          
           console.log(data)
           if (data.insertedId) {
+            refetch(); // refetch to show the updated data
             Swal.fire({
               title: "Success",
               text: "Food Added to Cart Successfully ",
