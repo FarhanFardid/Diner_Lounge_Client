@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import loginBanner from "../../assets/others/authentication.gif";
 import authImg from "../../assets/others/authentication1.png";
 import { FaGoogle,FaFacebook,FaGithub } from 'react-icons/fa';
@@ -10,16 +10,27 @@ import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
 
 const Register = () => {
-  const {createUser,userUpdate,google,github} = useContext(AuthContext);
+  const {createUser,userUpdate,google,github,logOut} = useContext(AuthContext);
   const { register, handleSubmit,reset, formState: { errors } } = useForm();
+  const navigate =useNavigate();
   const onSubmit = data => {
     console.log(data)
     createUser(data.email,data.password)
     .then(res =>{
       const createdUser = res.user;
-      userUpdate(createdUser,data.name,data.photo)
       toast.success("Successfully Signed Up")
-      reset()
+
+      userUpdate(createdUser,data.name,data.photo)
+      .then(()=>{
+        toast.success("User Profile Successfully Updated ")
+        logOut();
+        navigate("/login");
+        reset()
+      })
+      .catch(()=>{
+        toast.error("User Profile Update Failed ")
+      })
+      
       console.log(createdUser);
     } )
     .catch(error=> {

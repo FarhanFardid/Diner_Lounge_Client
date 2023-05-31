@@ -30,7 +30,7 @@ import PrivateRoutes from "./PrivateRoutes";
     },
     {
       path: 'order/:category',
-      element: <OrderFood></OrderFood>
+      element: <PrivateRoutes><OrderFood></OrderFood></PrivateRoutes>
     },
     {
       path: 'contact',
