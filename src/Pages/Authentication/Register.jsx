@@ -6,22 +6,18 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useForm } from "react-hook-form";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
   const {createUser,userUpdate,google,github} = useContext(AuthContext);
-  const handleSignUp = event =>{
-    event.preventDefault();
-    const form = event.target;
-    const name = form.name.value;
-    const email = form.email.value;
-    const photo = form.photo.value;
-    const password = form.password.value;
-    console.log(name,email,password);
-    createUser(email,password)
+  const { register, handleSubmit,formState: { errors } } = useForm();
+  const onSubmit = data => {
+    console.log(data)
+    createUser(data.email,data.password)
     .then(res =>{
       const createdUser = res.user;
-      form.reset();
-      userUpdate(createdUser,name,photo)
+      userUpdate(createdUser,data.name,data.photo)
       toast.success("Successfully Signed Up")
       console.log(createdUser);
     } )
@@ -29,7 +25,32 @@ const Register = () => {
       console.log(error);
       toast.error("Sign Up Failed")
     })
-  }
+  
+  
+  };
+
+ 
+  // const handleSignUp = event =>{
+  //   event.preventDefault();
+  //   const form = event.target;
+  //   const name = form.name.value;
+  //   const email = form.email.value;
+  //   const photo = form.photo.value;
+  //   const password = form.password.value;
+  //   console.log(name,email,password);
+  //   createUser(email,password)
+  //   .then(res =>{
+  //     const createdUser = res.user;
+  //     form.reset();
+  //     userUpdate(createdUser,name,photo)
+  //     toast.success("Successfully Signed Up")
+  //     console.log(createdUser);
+  //   } )
+  //   .catch(error=> {
+  //     console.log(error);
+  //     toast.error("Sign Up Failed")
+  //   })
+  // }
   const googleHandle = () =>{
     google()
     .then(res =>{
@@ -61,6 +82,10 @@ const Register = () => {
    }
     return (
         <div>
+          <Helmet>
+        <title>Bistro Boss | Register</title>
+       
+      </Helmet>
       <div
         className="hero h-[550px]"
         style={{ backgroundImage: `url(${loginBanner})` }}
@@ -78,7 +103,8 @@ const Register = () => {
             <img src={authImg} alt="Auth Img" className="w-full" />
           </div>
           <div className="card w-full  shadow-2xl bg-base-300 m-8">
-            <form onSubmit={handleSignUp} className="card-body m-8">
+            {/* <form onSubmit={handleSignUp} className="card-body m-8"> */}
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body m-8">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text font-bold">Name</span>
@@ -87,8 +113,10 @@ const Register = () => {
                   type="text"
                   placeholder="Enter name"
                   name="name"
+                  {...register("name", { required: true })}
                   className="input input-bordered"
                 />
+                 {errors.name && <span className="text-red-700">Name field is required</span>}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -98,8 +126,10 @@ const Register = () => {
                   type="text"
                   placeholder="Enter email"
                   name="email"
+                  {...register("email", { required: true })}
                   className="input input-bordered"
                 />
+                 {errors.email && <span className="text-red-700">Email is required</span>}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -109,8 +139,10 @@ const Register = () => {
                   type="text"
                   placeholder="Enter photo url"
                   name="photo"
+                  {...register("photo", { required: true })}
                   className="input input-bordered"
                 />
+                 {errors.photo && <span className="text-red-700">This field is required</span>}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -120,8 +152,16 @@ const Register = () => {
                   type="password"
                   placeholder="Enter password"
                   name="password"
+                  {...register("password", { required: true,
+                  minLength: 6,
+                maxLength:20,
+              pattern: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]/})}
                   className="input input-bordered"
                 />
+                  {errors.password?.type === 'required' && <p className="text-red-700" role="alert">Password is required</p>}
+                  {errors.password?.type === 'minLength' && <p className="text-red-700" role="alert">Password must be at least 6 characters</p>}
+                  {errors.password?.type === 'maxLength' && <p className="text-red-700" role="alert">Password must be less than 20 characters</p>}
+                  {errors.password?.type === 'pattern' && <p className="text-red-700" role="alert">Password must contain one uppercase, one lowercase, one number and one special characters</p>}
               </div>
               <div className="form-control mt-6">
                

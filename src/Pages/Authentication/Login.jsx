@@ -7,6 +7,7 @@ import { useContext, useEffect, useRef, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
   const { userSignIn,google,github} = useContext(AuthContext);
@@ -76,6 +77,10 @@ const Login = () => {
          }
   return (
     <div>
+      <Helmet>
+        <title>Bistro Boss | Login</title>
+       
+      </Helmet>
       <div
         className="hero h-[550px]"
         style={{ backgroundImage: `url(${loginBanner})` }}
@@ -103,6 +108,7 @@ const Login = () => {
                   placeholder="Enter email"
                   name="email"
                   className="input input-bordered"
+                  required
                 />
               </div>
               <div className="form-control">
@@ -114,6 +120,7 @@ const Login = () => {
                   placeholder="Enter password"
                   name="password"
                   className="input input-bordered"
+                  required
                 />
               </div>
               <div className="form-control">
