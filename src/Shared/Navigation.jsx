@@ -38,7 +38,7 @@ const Navigation = () => {
         <Link to="/contact"> Contact Us </Link>
       </li>
 
-     <li><Link>
+     <li><Link to='/dashboard/myCart'>
        
        <button className="btn bg-transparent gap-2">
          Cart <FaShoppingCart/>
