@@ -22,10 +22,24 @@ const Register = () => {
 
       userUpdate(createdUser,data.name,data.photo)
       .then(()=>{
-        toast.success("User Profile Successfully Updated ")
-        logOut();
-        navigate("/login");
-        reset()
+        const saveUser= {name: data.name, email: data.email}
+        fetch('http://localhost:5000/users',{
+          method: "POST",
+          headers:{
+            "content-type" : "application/json"
+        },
+        body: JSON.stringify(saveUser)
+        })
+        .then (res=>res.json())
+        .then(data =>{
+          if(data.insertedId){
+            toast.success("User Profile Successfully Updated ")
+            logOut();
+            navigate("/login");
+            reset()
+          }
+        })
+        
       })
       .catch(()=>{
         toast.error("User Profile Update Failed ")
