@@ -58,7 +58,7 @@ import UserReview from "../Pages/DashBoard/UserReview/UserReview";
     },
     {
       path:'dashboard',
-      element:<DashBoard></DashBoard>,
+      element:<PrivateRoutes><DashBoard></DashBoard></PrivateRoutes>,
       children: [
         {
           path:'myCart',

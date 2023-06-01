@@ -42,7 +42,7 @@ Swal.fire({
       
       <tr>
         
-          <td>{index+1}</td>
+          <td className='font-bold'>{index+1}</td>
         
         <td>
           <div className="flex items-center space-x-3">
@@ -58,7 +58,7 @@ Swal.fire({
         <div className="font-bold">{name}</div>
        
         </td>
-        <td> ${price}</td>
+        <td className='font-bold'> ${price}</td>
         <th>
           <button onClick={()=> handleDelete(_id)} className="btn btn-circle btn-sm bg-red-800"><FaTrashAlt/></button>
         </th>

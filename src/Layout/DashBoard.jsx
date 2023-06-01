@@ -5,9 +5,11 @@ import Footer from "../Shared/Footer";
 import {MdRateReview} from 'react-icons/md';
 import {RiMessage2Fill} from 'react-icons/ri';
 import {FaHome, FaShoppingCart,FaCalendarAlt,FaCalendarCheck,FaMoneyCheckAlt,FaBars,FaShopify} from 'react-icons/fa';
+import useCart from "../Hooks/useCart";
 
 
 const DashBoard = () => {
+  const [cart] = useCart();
     return (
       <>
       
@@ -24,7 +26,7 @@ const DashBoard = () => {
             <h2 className="text-3xl font-semibold text-center text-orange-600 py-3">Bistro Boss Restaurant</h2>
               <h3 className="text-xl font-medium text-center p-2">User DashBoard</h3>
             <li><NavLink to="/dashboard/userHome"><FaHome className="w-6 h-6 text-cyan-500"></FaHome>User Home</NavLink></li>
-            <li><NavLink to="/dashboard/myCart"><FaShoppingCart className="w-6 h-6 text-cyan-500"/>My Cart</NavLink></li>
+            <li><NavLink to="/dashboard/myCart"><FaShoppingCart className="w-6 h-6 text-cyan-500"/>My Cart <span className="badge bg-white text-black font-bold">+{cart?.length}</span></NavLink></li>
             <li><NavLink to="/dashboard/userReservation"><FaCalendarAlt className="w-6 h-6 text-cyan-500"/>Reservation</NavLink></li>
             <li><NavLink to="/dashboard/userPayment"><FaMoneyCheckAlt className="w-6 h-6 text-cyan-500"/>Payment History</NavLink></li>
             <li><NavLink to="/dashboard/userBooking"><FaCalendarCheck className="w-6 h-6 text-cyan-500"/>My Booking</NavLink></li>
