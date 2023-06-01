@@ -38,10 +38,12 @@ const Login = () => {
             userSignIn(email,password)
             .then(res=>{
               const loggedUser = res.user;
-              form.reset()
               toast.success("Successfully Signed In")
-              navigate(from, {replace:true})
               console.log(loggedUser);
+              navigate(from, {replace:true})
+              form.reset()
+              
+            
             })
             .catch(error=> {
               console.log(error);
@@ -52,9 +54,31 @@ const Login = () => {
          const googleHandle = () =>{
           google()
           .then(res =>{
-            const createdUser = res.user; 
+            const loggedUser = res.user; 
             toast.success("Successfully Signed In")
-            console.log(createdUser);
+            navigate(from, {replace:true})
+            const saveUser = {
+              name: loggedUser.displayName
+                ? loggedUser.displayName
+                : "Name not available",
+              email: loggedUser.email,
+            };
+            console.log(saveUser);
+            fetch("http://localhost:5000/users", {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify(saveUser),
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                if (data.insertedId) {
+                  toast.success("User Successfully Added to DB ");
+            
+                  
+                }
+              })
           } )
           .catch(error=> {
             console.log(error);
@@ -64,9 +88,10 @@ const Login = () => {
           const githubHandle = () =>{
             github()
             .then(res =>{
-              const createdUser = res.user; 
+              const loggedUser = res.user; 
               toast.success("Successfully Signed In")
-              console.log(createdUser);
+              navigate(from, {replace:true})
+              console.log(loggedUser);
             } )
             .catch(error=> {
               console.log(error);

@@ -1,61 +1,64 @@
 import { Link, useNavigate } from "react-router-dom";
 import loginBanner from "../../assets/others/authentication.gif";
 import authImg from "../../assets/others/authentication1.png";
-import { FaGoogle,FaFacebook,FaGithub } from 'react-icons/fa';
+import { FaGoogle, FaFacebook, FaGithub } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useForm } from "react-hook-form";
 import { Helmet } from "react-helmet-async";
 
 const Register = () => {
-  const {createUser,userUpdate,google,github,logOut} = useContext(AuthContext);
-  const { register, handleSubmit,reset, formState: { errors } } = useForm();
-  const navigate =useNavigate();
-  const onSubmit = data => {
-    console.log(data)
-    createUser(data.email,data.password)
-    .then(res =>{
-      const createdUser = res.user;
-      toast.success("Successfully Signed Up")
+  const { createUser, userUpdate, google, github, logOut } =
+    useContext(AuthContext);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const navigate = useNavigate();
+  const onSubmit = (data) => {
+    console.log(data);
+    createUser(data.email, data.password)
+      .then((res) => {
+        const createdUser = res.user;
+        toast.success("Successfully Signed Up");
 
-      userUpdate(createdUser,data.name,data.photo)
-      .then(()=>{
-        const saveUser= {name: data.name, email: data.email}
-        fetch('http://localhost:5000/users',{
-          method: "POST",
-          headers:{
-            "content-type" : "application/json"
-        },
-        body: JSON.stringify(saveUser)
-        })
-        .then (res=>res.json())
-        .then(data =>{
-          if(data.insertedId){
-            toast.success("User Profile Successfully Updated ")
-            logOut();
-            navigate("/login");
-            reset()
-          }
-        })
-        
+        userUpdate(createdUser, data.name, data.photo)
+          .then(() => {
+            toast.success("User Profile Successfully Updated ");
+            const saveUser = { name: data.name, email: data.email };
+            fetch("http://localhost:5000/users", {
+              method: "POST",
+              headers: {
+                "content-type": "application/json",
+              },
+              body: JSON.stringify(saveUser),
+            })
+              .then((res) => res.json())
+              .then((data) => {
+                if (data.insertedId) {
+                  toast.success("User Successfully Added to DB ");
+                  logOut();
+                  navigate("/login");
+                  reset();
+                }
+              });
+          })
+          .catch(() => {
+            toast.error("User Profile Update Failed ");
+          });
+
+        // console.log(createdUser);
       })
-      .catch(()=>{
-        toast.error("User Profile Update Failed ")
-      })
-      
-      console.log(createdUser);
-    } )
-    .catch(error=> {
-      console.log(error);
-      toast.error("Sign Up Failed")
-    })
-  
-  
+      .catch((error) => {
+        console.log(error);
+        toast.error("Sign Up Failed");
+      });
   };
 
- 
   // const handleSignUp = event =>{
   //   event.preventDefault();
   //   const form = event.target;
@@ -77,40 +80,62 @@ const Register = () => {
   //     toast.error("Sign Up Failed")
   //   })
   // }
-  const googleHandle = () =>{
+  const googleHandle = () => {
     google()
-    .then(res =>{
-      const createdUser = res.user; 
-      toast.success("Successfully Signed Up")
-      console.log(createdUser);
-    } )
-    .catch(error=> {
-      console.log(error);
-      toast.error("Sign Up Failed")
-    })
-  }
-    const githubHandle = () =>{
-      github()
-      .then(res =>{
-        const createdUser = res.user; 
-        toast.success("Successfully Signed Up")
-        console.log(createdUser);
-      } )
-      .catch(error=> {
-        console.log(error);
-        toast.error("Sign Up Failed")
+      .then((res) => {
+        const createdUser = res.user;
+        logOut();
+              navigate("/login");
+        console.log(createUser);
+        toast.success("Successfully Signed Up");
+        const saveUser = {
+          name: createUser.displayName
+            ? createUser.displayName
+            : "Name not available",
+          email: createdUser.email,
+        };
+        console.log(saveUser);
+        fetch("http://localhost:5000/users", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(saveUser),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.insertedId) {
+              toast.success("User Successfully Added to DB ");
+              
+            }
+          });
       })
-     
-   
-  }
-  const fbHandle = () =>{
-    toast.warning("Facebook Integration will implement soon ")
-   }
-    return (
-        <div>
-          <Helmet>
+      .catch((error) => {
+        console.log(error);
+        toast.error("Sign Up Failed");
+      });
+  };
+  const githubHandle = () => {
+    github()
+      .then((res) => {
+        const createdUser = res.user;
+        console.log(createdUser);
+        toast.success("Successfully Signed Up");
+        logOut();
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.log(error);
+        toast.error("Sign Up Failed");
+      });
+  };
+  const fbHandle = () => {
+    toast.warning("Facebook Integration will implement soon ");
+  };
+  return (
+    <div>
+      <Helmet>
         <title>Bistro Boss | Register</title>
-       
       </Helmet>
       <div
         className="hero h-[550px]"
@@ -142,7 +167,9 @@ const Register = () => {
                   {...register("name", { required: true })}
                   className="input input-bordered"
                 />
-                 {errors.name && <span className="text-red-700">Name field is required</span>}
+                {errors.name && (
+                  <span className="text-red-700">Name field is required</span>
+                )}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -155,7 +182,9 @@ const Register = () => {
                   {...register("email", { required: true })}
                   className="input input-bordered"
                 />
-                 {errors.email && <span className="text-red-700">Email is required</span>}
+                {errors.email && (
+                  <span className="text-red-700">Email is required</span>
+                )}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -168,7 +197,9 @@ const Register = () => {
                   {...register("photo", { required: true })}
                   className="input input-bordered"
                 />
-                 {errors.photo && <span className="text-red-700">This field is required</span>}
+                {errors.photo && (
+                  <span className="text-red-700">This field is required</span>
+                )}
               </div>
               <div className="form-control">
                 <label className="label">
@@ -178,37 +209,79 @@ const Register = () => {
                   type="password"
                   placeholder="Enter password"
                   name="password"
-                  {...register("password", { required: true,
-                  minLength: 6,
-                maxLength:20,
-              pattern: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]/})}
+                  {...register("password", {
+                    required: true,
+                    minLength: 6,
+                    maxLength: 20,
+                    pattern: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]/,
+                  })}
                   className="input input-bordered"
                 />
-                  {errors.password?.type === 'required' && <p className="text-red-700" role="alert">Password is required</p>}
-                  {errors.password?.type === 'minLength' && <p className="text-red-700" role="alert">Password must be at least 6 characters</p>}
-                  {errors.password?.type === 'maxLength' && <p className="text-red-700" role="alert">Password must be less than 20 characters</p>}
-                  {errors.password?.type === 'pattern' && <p className="text-red-700" role="alert">Password must contain one uppercase, one lowercase, one number and one special characters</p>}
+                {errors.password?.type === "required" && (
+                  <p className="text-red-700" role="alert">
+                    Password is required
+                  </p>
+                )}
+                {errors.password?.type === "minLength" && (
+                  <p className="text-red-700" role="alert">
+                    Password must be at least 6 characters
+                  </p>
+                )}
+                {errors.password?.type === "maxLength" && (
+                  <p className="text-red-700" role="alert">
+                    Password must be less than 20 characters
+                  </p>
+                )}
+                {errors.password?.type === "pattern" && (
+                  <p className="text-red-700" role="alert">
+                    Password must contain one uppercase, one lowercase, one
+                    number and one special characters
+                  </p>
+                )}
               </div>
               <div className="form-control mt-6">
-               
-                <input className="btn bg-[#D1A054]" type="submit" value="Sign Up" />
+                <input
+                  className="btn bg-[#D1A054]"
+                  type="submit"
+                  value="Sign Up"
+                />
               </div>
-              </form>
-              <p className="text-center font-medium py-2">Already have Bistro Boss Account?<Link to='/login' className="text-blue-700 font-bold"> Sign In</Link></p>
-              <div>
-                <p className="font-bold text-lg text-center">Or Sign Up with</p>
-                <div className="flex justify-center py-3">
-                    <button onClick={fbHandle} className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaFacebook/></button>
-                    <button onClick={googleHandle} className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaGoogle/></button>
-                    <button onClick={githubHandle} className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaGithub/></button>
-                </div>
+            </form>
+            <p className="text-center font-medium py-2">
+              Already have Bistro Boss Account?
+              <Link to="/login" className="text-blue-700 font-bold">
+                {" "}
+                Sign In
+              </Link>
+            </p>
+            <div>
+              <p className="font-bold text-lg text-center">Or Sign Up with</p>
+              <div className="flex justify-center py-3">
+                <button
+                  onClick={fbHandle}
+                  className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"
+                >
+                  <FaFacebook />
+                </button>
+                <button
+                  onClick={googleHandle}
+                  className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"
+                >
+                  <FaGoogle />
+                </button>
+                <button
+                  onClick={githubHandle}
+                  className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"
+                >
+                  <FaGithub />
+                </button>
               </div>
-            
+            </div>
           </div>
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default Register;

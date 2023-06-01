@@ -16,27 +16,27 @@ const[loading,setLoading] = useState(true);
   
     const createUser=(email,password)=>
     {
-        setLoading(false)
+        setLoading(true)
      return createUserWithEmailAndPassword(auth,email,password)
 
     }
     const userSignIn =(email,password) =>{
-        setLoading(false)
+        setLoading(true)
         return signInWithEmailAndPassword(auth,email,password)
     } 
     const userUpdate = (user,name,photo)=>{
-        setLoading(false)
+        setLoading(true)
        return updateProfile(user, {
             displayName: name , photoURL: photo
           })
     }
     const google=()=>{
-        setLoading(false)
+        setLoading(true)
         return signInWithPopup(auth,googleProvider)
 
     }
     const github=() =>{
-        setLoading(false)
+        setLoading()
         return signInWithPopup(auth,githubProvider)
     }
     // const facebook=()=>{
@@ -47,6 +47,18 @@ const[loading,setLoading] = useState(true);
     const logOut = () =>{
         return signOut(auth)
     }
+
+    useEffect(()=>{
+        const unsubscribe = onAuthStateChanged(auth,currentUser=>{
+            setUser(currentUser);
+            setLoading(false);
+    
+        });
+        return ()=>{
+            unsubscribe();
+        }
+       },[])
+       
     const authInfo={
         user,
         loading,
@@ -58,16 +70,7 @@ const[loading,setLoading] = useState(true);
         github,
 
     }
-   useEffect(()=>{
-    const unsubscribe = onAuthStateChanged(auth,currentUser=>{
-        setUser(currentUser);
-        setLoading(false);
 
-    });
-    return ()=>{
-        unsubscribe();
-    }
-   },[])
 
     return (
         <AuthContext.Provider value={authInfo}>
