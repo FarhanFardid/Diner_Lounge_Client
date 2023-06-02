@@ -17,6 +17,11 @@ import UserReservation from "../Pages/DashBoard/UserReservation/UserReservation"
 import UserBooking from "../Pages/DashBoard/UserBooking/UserBooking";
 import UserPayment from "../Pages/DashBoard/UserPayment/UserPayment";
 import UserReview from "../Pages/DashBoard/UserReview/UserReview";
+import AdminHome from "../Pages/DashBoard/Admin/AdminHome";
+import AdminAddItem from "../Pages/DashBoard/Admin/AdminAddItem";
+import AdminManageItem from "../Pages/DashBoard/Admin/AdminManageItem";
+import AdminManageBooking from "../Pages/DashBoard/Admin/AdminManageBooking";
+import AllUsers from "../Pages/DashBoard/Admin/AllUsers";
 
   const router = createBrowserRouter([
     {
@@ -83,7 +88,30 @@ import UserReview from "../Pages/DashBoard/UserReview/UserReview";
         {
           path: 'userReview',
           element:<UserReview></UserReview>
-        }
+        },
+        {
+          path: 'adminHome',
+          element:<AdminHome></AdminHome>
+        },
+        {
+          path: 'adminAddItem',
+          element:<AdminAddItem></AdminAddItem>
+        },
+        {
+          path: 'adminManageItem',
+          element:<AdminManageItem></AdminManageItem>
+        },
+        
+        {
+          path: 'adminManageBooking',
+          element:<AdminManageBooking></AdminManageBooking>
+        },
+        
+        {
+          path: 'allUsers',
+          element:<AllUsers></AllUsers>
+        },
+        
       ]
     }
   
