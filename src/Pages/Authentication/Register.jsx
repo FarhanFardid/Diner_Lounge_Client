@@ -84,8 +84,7 @@ const Register = () => {
     google()
       .then((res) => {
         const createdUser = res.user;
-        logOut();
-              navigate("/login");
+      
         console.log(createUser);
         toast.success("Successfully Signed Up");
         const saveUser = {
@@ -105,6 +104,8 @@ const Register = () => {
           .then((res) => res.json())
           .then((data) => {
             if (data.insertedId) {
+              logOut();
+              navigate("/login");
               toast.success("User Successfully Added to DB ");
               
             }
