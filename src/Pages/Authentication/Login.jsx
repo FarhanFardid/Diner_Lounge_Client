@@ -55,6 +55,7 @@ const Login = () => {
           google()
           .then(res =>{
             const loggedUser = res.user; 
+            console.log(loggedUser);
             toast.success("Successfully Signed In")
             navigate(from, {replace:true})
             const saveUser = {

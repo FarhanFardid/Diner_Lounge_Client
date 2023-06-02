@@ -22,7 +22,7 @@ const Register = () => {
   const onSubmit = (data) => {
     console.log(data);
     createUser(data.email, data.password)
-      .then((res) => {
+      .then(res => {
         const createdUser = res.user;
         toast.success("Successfully Signed Up");
 
@@ -37,7 +37,7 @@ const Register = () => {
               },
               body: JSON.stringify(saveUser),
             })
-              .then((res) => res.json())
+              .then(res => res.json())
               .then((data) => {
                 if (data.insertedId) {
                   toast.success("User Successfully Added to DB ");
@@ -59,37 +59,19 @@ const Register = () => {
       });
   };
 
-  // const handleSignUp = event =>{
-  //   event.preventDefault();
-  //   const form = event.target;
-  //   const name = form.name.value;
-  //   const email = form.email.value;
-  //   const photo = form.photo.value;
-  //   const password = form.password.value;
-  //   console.log(name,email,password);
-  //   createUser(email,password)
-  //   .then(res =>{
-  //     const createdUser = res.user;
-  //     form.reset();
-  //     userUpdate(createdUser,name,photo)
-  //     toast.success("Successfully Signed Up")
-  //     console.log(createdUser);
-  //   } )
-  //   .catch(error=> {
-  //     console.log(error);
-  //     toast.error("Sign Up Failed")
-  //   })
-  // }
+  
   const googleHandle = () => {
     google()
-      .then((res) => {
+      .then(res => {
         const createdUser = res.user;
       
-        console.log(createUser);
+        console.log(createdUser);
         toast.success("Successfully Signed Up");
+        logOut();
+              navigate("/login");
         const saveUser = {
-          name: createUser.displayName
-            ? createUser.displayName
+          name: createdUser.displayName
+            ? createdUser.displayName
             : "Name not available",
           email: createdUser.email,
         };
@@ -104,8 +86,7 @@ const Register = () => {
           .then((res) => res.json())
           .then((data) => {
             if (data.insertedId) {
-              logOut();
-              navigate("/login");
+              
               toast.success("User Successfully Added to DB ");
               
             }
