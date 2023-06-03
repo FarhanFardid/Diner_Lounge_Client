@@ -38,26 +38,17 @@ const Navigation = () => {
         <Link to="/contact"> Contact Us </Link>
       </li>
 
-     <li><Link to='/dashboard/myCart'>
+  
+
+      {user ? (
+        <>
+           <li><Link to='/dashboard/myCart'>
        
        <button className="btn bg-transparent gap-2">
          Cart <FaShoppingCart/>
          <div className="badge badge-info">+{cart?.length}</div>
        </button>
      </Link></li> 
-
-      {user ? (
-        <>
-          <li>
-            <Link to="/">
-              <button></button>
-            </Link>
-          </li>{" "}
-          <li>
-            <Link to="/">
-              <button></button>
-            </Link>
-          </li>
         </>
       ) : (
         <li></li>
