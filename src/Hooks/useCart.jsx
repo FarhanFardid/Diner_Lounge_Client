@@ -8,7 +8,7 @@ const useCart = () =>
 {
 const {user} = useContext(AuthContext);
 const token = localStorage.getItem('access-token');
-// const axiosSecure = useAxiosSecure();
+// const [axiosSecure] = useAxiosSecure();
 
 const { refetch, data: cart=[] } = useQuery({
     queryKey: ['carts', user?.email],

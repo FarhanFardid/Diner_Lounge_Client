@@ -15,7 +15,10 @@ const DashBoard = () => {
   const [cart] = useCart();
 //  const isAdmin = true;
 const [isAdmin] = useAdmin();
-const admin = isAdmin?.admin;
+// without axiosSecure use  "const admin = isAdmin?.admin" and with axiosSecure use only "const [isAdmin] = useAdmin();"
+
+
+// const admin = isAdmin?.admin;  
 console.log(isAdmin)
     return (
       <>
@@ -32,7 +35,7 @@ console.log(isAdmin)
           <ul className="menu p-4 w-80 bg-slate-800 text-white ps-5 ">
           <h2 className="text-3xl font-semibold text-center text-orange-600 py-3">Bistro Boss Restaurant</h2>
             {
-              admin ? <>
+              isAdmin ? <>
                   <h3 className="text-xl font-medium text-center p-2">Admin DashBoard</h3>
             <li><NavLink to="/dashboard/adminHome"><FaHome className="w-6 h-6 text-cyan-500"></FaHome>Admin Home</NavLink></li>
             <li><NavLink to="/dashboard/adminAddItem"><GiKnifeFork className="w-6 h-6 text-cyan-500"/>Add Items </NavLink></li>
