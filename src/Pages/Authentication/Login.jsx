@@ -42,9 +42,32 @@ const Login = () => {
               console.log(loggedUser);
               navigate(from, {replace:true})
               form.reset()
+               const saveUser = {
+                name: loggedUser.displayName
+                  ? loggedUser.displayName
+                  : "Name not available",
+                email: loggedUser.email,
+              };
+              console.log(saveUser);
+              fetch("http://localhost:5000/users", {
+                method: "POST",
+                headers: {
+                  "content-type": "application/json",
+                },
+                body: JSON.stringify(saveUser),
+              })
+                .then((res) => res.json())
+                .then((data) => {
+                  if (data.insertedId) {
+                    toast.success("User Successfully Added to DB ");
+              
+                    
+                  }
+                })
+            } )
               
             
-            })
+            
             .catch(error=> {
               console.log(error);
               toast.error("Sign In Failed")

@@ -93,7 +93,7 @@ const UserTable = ({ person, index, refetch }) => {
         <th>
           <button
             onClick={() => handleDelete(_id)}
-            className="btn btn-circle btn-sm bg-red-800"
+            className= {role === 'admin'? "btn btn-circle btn-sm bg-red-400 btn-disabled" : "btn btn-circle btn-sm bg-red-800"}   
           >
             <FaTrashAlt />
           </button>
