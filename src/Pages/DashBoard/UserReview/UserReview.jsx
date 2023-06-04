@@ -6,7 +6,7 @@ const UserReview = () => {
     return (
         <div>
         <Helmet>
-<title>Bistro Boss | Payment History</title>
+<title>Bistro Boss | User Review</title>
 
 </Helmet>
     

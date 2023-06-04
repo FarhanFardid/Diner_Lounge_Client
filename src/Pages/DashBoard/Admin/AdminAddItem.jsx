@@ -7,10 +7,7 @@ import { Helmet } from "react-helmet-async";
 
 const image_Hosting_Token = import.meta.env.VITE_Image_Upload_Token;
 const AdminAddItem = () => {
-    <Helmet>
-    <title>Bistro Boss | Add Menu Item</title>
    
-  </Helmet>
     const [axiosSecure] = useAxiosSecure();
     const { register, handleSubmit,reset, formState: { errors } } = useForm();
     const image_Hosting_Url = `https://api.imgbb.com/1/upload?key=${image_Hosting_Token}`
@@ -52,6 +49,10 @@ const AdminAddItem = () => {
   console.log(image_Hosting_Token)
   return (
     <div>
+       <Helmet>
+    <title>Bistro Boss | Add Menu Item</title>
+   
+  </Helmet>
       <SectionTitle
         heading="Add An Item"
         subHeading="What's New "

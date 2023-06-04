@@ -2,9 +2,11 @@ import { useQuery } from "@tanstack/react-query";
 import SectionTitle from "../../../Shared/SectionTitle";
 import UserTable from "./UserTable";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
+import { Helmet } from "react-helmet-async";
 
 
 const AllUsers = () => {
+  
   // const token = localStorage.getItem('access-token');
   const [axiosSecure] = useAxiosSecure();
     const { data : users =[], refetch } = useQuery(['users'], async()=>{
@@ -24,6 +26,9 @@ const AllUsers = () => {
     )
     return (
         <div>
+          <Helmet>
+    <title>Bistro Boss | All Users</title>
+  </Helmet>
             <SectionTitle heading="Manage All User" subHeading="Available Users"></SectionTitle>
             <h2 className="text-2xl font-medium w-full text-center">Total Users: {users.length}</h2>
             <div className="m-4">
