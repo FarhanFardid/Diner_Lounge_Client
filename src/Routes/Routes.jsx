@@ -22,6 +22,7 @@ import AdminAddItem from "../Pages/DashBoard/Admin/AdminAddItem";
 import AdminManageItem from "../Pages/DashBoard/Admin/AdminManageItem";
 import AdminManageBooking from "../Pages/DashBoard/Admin/AdminManageBooking";
 import AllUsers from "../Pages/DashBoard/Admin/AllUsers";
+import AdminRoutes from "./AdminRoutes";
 
   const router = createBrowserRouter([
     {
@@ -91,25 +92,25 @@ import AllUsers from "../Pages/DashBoard/Admin/AllUsers";
         },
         {
           path: 'adminHome',
-          element:<AdminHome></AdminHome>
+          element:<AdminRoutes><AdminHome></AdminHome></AdminRoutes>
         },
         {
           path: 'adminAddItem',
-          element:<AdminAddItem></AdminAddItem>
+          element:<AdminRoutes><AdminAddItem></AdminAddItem></AdminRoutes>
         },
         {
           path: 'adminManageItem',
-          element:<AdminManageItem></AdminManageItem>
+          element:  <AdminRoutes><AdminManageItem></AdminManageItem></AdminRoutes>
         },
-        
         {
           path: 'adminManageBooking',
-          element:<AdminManageBooking></AdminManageBooking>
+          element:<AdminRoutes><AdminManageBooking></AdminManageBooking></AdminRoutes>
         },
         
         {
           path: 'allUsers',
-          element:<AllUsers></AllUsers>
+          element: <AdminRoutes><AllUsers></AllUsers></AdminRoutes>
+         
         },
         
       ]
