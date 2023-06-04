@@ -1,7 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import SectionTitle from "../../../Shared/SectionTitle";
-import { useEffect, useState } from "react";
+
 import MenuTable from "./MenuTable";
+import useMenu from "../../../Hooks/useMenu";
 
 
 const AdminManageItem = () => {
@@ -9,19 +10,9 @@ const AdminManageItem = () => {
     <title>Bistro Boss | Manage Items</title>
    
   </Helmet>
-  const [menu,setMenu] = useState([]);
+  const [menu, ,refetch] = useMenu();  //   As returning in array so indexing is important
 
-       useEffect(()=>{
-        fetch('http://localhost:5000/menu')
-        .then (res=>res.json())
-        .then(data=>{
-            console.log(data)
-            setMenu(data)
-        })
-       },[])
 
- 
-  
     return (
         <div>
             <SectionTitle heading="Manage All Items" subHeading="Hurry Up!"></SectionTitle>
@@ -45,7 +36,7 @@ const AdminManageItem = () => {
     </thead>
     
    {
-    menu.map((item,index)=><MenuTable key={item._id} item={item} index={index}></MenuTable>)
+    menu.map((item,index)=><MenuTable key={item._id} item={item} index={index} refetch={refetch}></MenuTable>)
    }
     
   </table>
