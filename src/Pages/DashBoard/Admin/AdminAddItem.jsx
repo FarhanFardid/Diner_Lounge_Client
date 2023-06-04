@@ -3,11 +3,16 @@ import SectionTitle from "../../../Shared/SectionTitle";
 import { useForm } from "react-hook-form";
 import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const image_Hosting_Token = import.meta.env.VITE_Image_Upload_Token;
 const AdminAddItem = () => {
+    <Helmet>
+    <title>Bistro Boss | Add Menu Item</title>
+   
+  </Helmet>
     const [axiosSecure] = useAxiosSecure();
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit,reset, formState: { errors } } = useForm();
     const image_Hosting_Url = `https://api.imgbb.com/1/upload?key=${image_Hosting_Token}`
 
   const onSubmit = data => {
@@ -30,7 +35,7 @@ const AdminAddItem = () => {
             .then(data=>{
                 console.log(data.data)
                 if (data.data.insertedId) {
-                    
+                    reset();
                     Swal.fire({
                       title: "Success",
                       text: "New Recipe Added to Menu Successfully ",

@@ -59,9 +59,9 @@ Swal.fire({
        
         </td>
         <td className='font-bold'> ${price}</td>
-        <th>
+        <td>
           <button onClick={()=> handleDelete(_id)} className="btn btn-circle btn-sm bg-red-800"><FaTrashAlt/></button>
-        </th>
+        </td>
       </tr>
      
      
