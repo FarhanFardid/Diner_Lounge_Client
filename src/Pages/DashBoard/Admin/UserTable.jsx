@@ -6,37 +6,35 @@ const UserTable = ({ person, index, refetch }) => {
 
   const handleDelete = (id) => {
     Swal.fire({
-      title: 'Remove From User?',
+      title: "Remove From User?",
       text: "You won't be able to revert this!",
-      icon: 'warning',
+      icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
-      cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, Remove'
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, Remove",
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(`http://localhost:5000/users/${id}`, {
-            method: "DELETE",
-            headers:{
-                "content-type" : "application/json"
-            }
+          method: "DELETE",
+          headers: {
+            "content-type": "application/json",
+          },
         })
-        .then (res => res.json())
-        .then (data => {
-            if(data.deletedCount>0){
-                refetch()
-                Swal.fire(
-                    'Deleted!',
-                    'Person has been deleted from user.',
-                    'success')
+          .then((res) => res.json())
+          .then((data) => {
+            if (data.deletedCount > 0) {
+              refetch();
+              Swal.fire(
+                "Deleted!",
+                "Person has been deleted from user.",
+                "success"
+              );
             }
-          
-        })
-      
-        
+          });
       }
-    })
-        }
+    });
+  };
 
   const handleAdmin = (id) => {
     Swal.fire({
@@ -79,21 +77,31 @@ const UserTable = ({ person, index, refetch }) => {
         </td>
         <td className="font-bold">
           {role === "admin" ? (
-            <><button> <span className="flex flex-col items-center justify-center">
-            Admin <BsPersonCheck className="h-6 w-6" />{" "}
-          </span></button>
-             
+            <>
+              <button>
+                {" "}
+                <span className="flex flex-col items-center justify-center">
+                  Admin <BsPersonCheck className="h-6 w-6" />{" "}
+                </span>
+              </button>
             </>
           ) : (
-            <button onClick={() => handleAdmin(_id)} >
-            <span className="flex flex-col items-center justify-center">User<BsPersonCircle className="h-6 w-6" /></span>  
+            <button onClick={() => handleAdmin(_id)}>
+              <span className="flex flex-col items-center justify-center">
+                User
+                <BsPersonCircle className="h-6 w-6" />
+              </span>
             </button>
           )}{" "}
         </td>
         <th>
           <button
             onClick={() => handleDelete(_id)}
-            className= {role === 'admin'? "btn btn-circle btn-sm bg-red-400 btn-disabled" : "btn btn-circle btn-sm bg-red-800"}   
+            className={
+              role === "admin"
+                ? "btn btn-circle btn-sm bg-red-400 btn-disabled"
+                : "btn btn-circle btn-sm bg-red-800"
+            }
           >
             <FaTrashAlt />
           </button>

@@ -37,7 +37,7 @@ const[loading,setLoading] = useState(true);
     }
    
     const github=() =>{
-        setLoading()
+        setLoading(true)
         return signInWithPopup(auth,githubProvider)
     }
     // const facebook=()=>{
