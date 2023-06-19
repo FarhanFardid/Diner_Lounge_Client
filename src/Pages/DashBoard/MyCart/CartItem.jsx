@@ -55,7 +55,7 @@ const CartItem = ({ item, index, refetch }) => {
         <td>
           <button
             onClick={() => handleDelete(_id)}
-            className="btn btn-circle btn-sm bg-red-800"
+            className="btn btn-circle btn-sm bg-red-900 hover:bg-red-700"
           >
             <FaTrashAlt />
           </button>

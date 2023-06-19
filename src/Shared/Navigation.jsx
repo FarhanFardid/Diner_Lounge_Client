@@ -111,7 +111,7 @@ const Navigation = () => {
             </Tooltip>
             <Link>
               <button
-                className="btn btn-md  bg-orange-500 hover:bg-orange-700"
+                className="btn btn-md  bg-slate-700 hover:bg-slate-900"
                 onClick={handleLogout}
               >
                 Logout
@@ -120,7 +120,7 @@ const Navigation = () => {
           </>
         ) : (
           <Link to="/login">
-            <button className="btn btn-md bg-orange-500 hover:bg-orange-700">
+            <button className="btn btn-md bg-slate-700 hover:bg-slate-900">
               Login
             </button>
           </Link>

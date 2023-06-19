@@ -223,7 +223,7 @@ const Register = () => {
               </div>
               <div className="form-control mt-6">
                 <input
-                  className="btn bg-[#D1A054]"
+                  className="btn bg-slate-700 hover:bg-slate-900"
                   type="submit"
                   value="Sign Up"
                 />
@@ -241,19 +241,19 @@ const Register = () => {
               <div className="flex justify-center py-3">
                 <button
                   onClick={fbHandle}
-                  className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"
+                  className="p-1 m-2 btn btn-circle bg-gray-600 hover:bg-slate-800 text-white text-2xl"
                 >
                   <FaFacebook />
                 </button>
                 <button
                   onClick={googleHandle}
-                  className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"
+                  className="p-1 m-2 btn btn-circle  bg-gray-600 hover:bg-slate-800 text-white text-2xl"
                 >
                   <FaGoogle />
                 </button>
                 <button
                   onClick={githubHandle}
-                  className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"
+                  className="p-1 m-2 btn btn-circle  bg-gray-600 hover:bg-slate-800 text-white text-2xl"
                 >
                   <FaGithub />
                 </button>

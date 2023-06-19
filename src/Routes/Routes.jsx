@@ -21,6 +21,7 @@ import AdminManageBooking from "../Pages/DashBoard/Admin/AdminManageBooking";
 import AllUsers from "../Pages/DashBoard/Admin/AllUsers";
 import AdminRoutes from "./AdminRoutes";
 import PaymentHistory from "../Pages/DashBoard/PaymentHistory/PaymentHistory";
+import Error from "../Pages/Error/Error";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,17 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
     ],
+  },
+  
+    {
+      path: "*",
+      element: <Main></Main>,
+      children: [
+
+        {path: '*',
+          element: <Error></Error>
+        }
+      ]
   },
   {
     path: "dashboard",

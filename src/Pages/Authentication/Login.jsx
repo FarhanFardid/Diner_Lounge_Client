@@ -190,16 +190,16 @@ const Login = () => {
               </div>
               <div className="form-control mt-6">
                 
-                <input type="submit" disabled={disable}  className="btn bg-[#D1A054]" value="Sign In" />
+                <input type="submit" disabled={disable}  className="btn bg-slate-700 hover:bg-slate-900" value="Sign In" />
               </div>
               </form>
               <p className="text-center font-medium py-2">New to Diner Lounge?<Link to='/register' className="text-blue-700 font-bold"> Sign Up</Link></p>
               <div>
                 <p className="font-bold text-lg text-center">Or Sign In with</p>
                 <div className="flex justify-center py-3">
-                    <button onClick={fbHandle} className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaFacebook/></button>
-                    <button onClick={googleHandle} className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaGoogle/></button>
-                    <button onClick={githubHandle} className="p-1 m-2 btn btn-circle bg-gray-300 hover:bg-[#D1A054] text-gray-900 text-2xl"><FaGithub/></button>
+                    <button onClick={fbHandle} className="p-1 m-2 btn btn-circle  bg-gray-600 hover:bg-slate-800 text-white text-2xl"><FaFacebook/></button>
+                    <button onClick={googleHandle} className="p-1 m-2 btn btn-circle  bg-gray-600 hover:bg-slate-800 text-white text-2xl"><FaGoogle/></button>
+                    <button onClick={githubHandle} className="p-1 m-2 btn btn-circle  bg-gray-600 hover:bg-slate-800 text-white text-2xl"><FaGithub/></button>
                 </div>
               </div>
           
