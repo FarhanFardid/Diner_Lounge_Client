@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <div>
              <Helmet>
-        <title>Bistro Boss | Home</title>
+        <title>Diner Lounge | Home</title>
        
       </Helmet>
             <HomeBanner></HomeBanner>

@@ -50,7 +50,7 @@ const AdminAddItem = () => {
   return (
     <div>
        <Helmet>
-    <title>Bistro Boss | Add Menu Item</title>
+    <title>Diner Lounge | Add Menu Item</title>
    
   </Helmet>
       <SectionTitle

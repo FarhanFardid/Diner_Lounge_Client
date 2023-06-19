@@ -130,7 +130,7 @@ const Login = () => {
   return (
     <div>
       <Helmet>
-        <title>Bistro Boss | Login</title>
+        <title>Diner Lounge | Login</title>
        
       </Helmet>
       <div
@@ -193,7 +193,7 @@ const Login = () => {
                 <input type="submit" disabled={disable}  className="btn bg-[#D1A054]" value="Sign In" />
               </div>
               </form>
-              <p className="text-center font-medium py-2">New to Bistro Boss?<Link to='/register' className="text-blue-700 font-bold"> Sign Up</Link></p>
+              <p className="text-center font-medium py-2">New to Diner Lounge?<Link to='/register' className="text-blue-700 font-bold"> Sign Up</Link></p>
               <div>
                 <p className="font-bold text-lg text-center">Or Sign In with</p>
                 <div className="flex justify-center py-3">

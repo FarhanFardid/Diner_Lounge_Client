@@ -27,7 +27,7 @@ const AllUsers = () => {
     return (
         <div>
           <Helmet>
-    <title>Bistro Boss | All Users</title>
+    <title>Diner Lounge | All Users</title>
   </Helmet>
             <SectionTitle heading="Manage All User" subHeading="Available Users"></SectionTitle>
             <h2 className="text-2xl font-medium w-full text-center">Total Users: {users.length}</h2>

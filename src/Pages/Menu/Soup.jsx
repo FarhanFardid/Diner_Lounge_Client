@@ -12,7 +12,7 @@ const Soup = () => {
     const soups = menu.filter(dt=> dt.category === 'soup')
     return (
         <div>
-        <CommonBanner img={soupBan} heading="Soups" content="Savor warmth and comfort with Bistro Boss' soul-soothing soup menu: From creamy classics to hearty broths, our carefully crafted soups are infused with flavors that will nourish your senses and leave you craving for more" size = "null" ></CommonBanner>
+        <CommonBanner img={soupBan} heading="Soups" content="Savor warmth and comfort with Diner Lounge' soul-soothing soup menu: From creamy classics to hearty broths, our carefully crafted soups are infused with flavors that will nourish your senses and leave you craving for more" size = "null" ></CommonBanner>
         <div className="grid md:grid-cols-2 gap-2 p-3 mb-3">
           {
               soups.map(soup=> <ItemCard key={soup._id} item={soup}></ItemCard> )

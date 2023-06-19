@@ -6,7 +6,7 @@ const UserBooking = () => {
     return (
         <div>
         <Helmet>
-<title>Bistro Boss | My Bookings</title>
+<title>Diner Lounge | My Bookings</title>
 
 </Helmet>
     

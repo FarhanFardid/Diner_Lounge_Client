@@ -13,7 +13,7 @@ const Featured = () => {
                     <p>27 May, 2023</p>
                     <h3>Where Can I Get Some?</h3>
                     <p>
-Experience a fiery delight with our featured item at Bistro Boss Restaurant: the `Spicy Shrimp Stick`. Succulent shrimp marinated in a tantalizing blend of spices, skewered and grilled to perfection. Each bite delivers a burst of flavor, combining the smoky char from the grill with the zing of our secret spicy sauce. Served with a side of cool cucumber salad to balance the heat. </p>
+Experience a fiery delight with our featured item at Diner Lounge Restaurant: the `Spicy Shrimp Stick`. Succulent shrimp marinated in a tantalizing blend of spices, skewered and grilled to perfection. Each bite delivers a burst of flavor, combining the smoky char from the grill with the zing of our secret spicy sauce. Served with a side of cool cucumber salad to balance the heat. </p>
                 </div>
               
             </div>

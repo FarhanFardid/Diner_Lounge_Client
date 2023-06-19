@@ -54,12 +54,12 @@ const OrderFood = () => {
   return (
     <div>
       <Helmet>
-        <title>Bistro Boss | Order Food</title>
+        <title>Diner Lounge | Order Food</title>
       </Helmet>
       <CommonBanner
         img={banner}
         size="big"
-        content="Order Food Easily at Bistro Boss. Bringing convenience to your fingertips. With just a few taps, you can enjoy a delectable meal from their diverse menu"
+        content="Order Food Easily at Diner Lounge. Bringing convenience to your fingertips. With just a few taps, you can enjoy a delectable meal from their diverse menu"
         heading="Order Food"
       ></CommonBanner>
 

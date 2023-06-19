@@ -9,7 +9,7 @@ const MyCart = () => {
   return (
     <div>
       <Helmet>
-        <title>Bistro Boss | My Cart</title>
+        <title>Diner Lounge | My Cart</title>
       </Helmet>
 
       <SectionTitle

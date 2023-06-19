@@ -9,10 +9,10 @@ const ContactUs = () => {
     return (
         <div>
             <Helmet>
-        <title>Bistro Boss | Contact Us</title>
+        <title>Diner Lounge | Contact Us</title>
        
       </Helmet>
-            <CommonBanner img={contactBanner} size='big' heading='Contact Us' content="Connect with Bistro Boss for a delightful dining experience and exceptional service"></CommonBanner>
+            <CommonBanner img={contactBanner} size='big' heading='Contact Us' content="Connect with Diner Lounge for a delightful dining experience and exceptional service"></CommonBanner>
             <Location></Location>
             <ContactForm></ContactForm>
         </div>

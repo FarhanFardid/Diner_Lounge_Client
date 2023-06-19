@@ -7,7 +7,7 @@ function App() {
   return (
     <>
    
-      <h1>Bistro Boss Restaurant</h1>
+      <h1>Diner Lounge Restaurant</h1>
   
     </>
   )

@@ -5,7 +5,7 @@ const AdminHome = () => {
     return (
         <div>
               <Helmet>
-<title>Bistro Boss | Admin Dashboard Home</title>
+<title>Diner Lounge | Admin Dashboard Home</title>
 
 </Helmet>
                    <h2>Admin Home Page</h2>

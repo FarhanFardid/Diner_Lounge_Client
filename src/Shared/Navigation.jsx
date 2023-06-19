@@ -67,7 +67,7 @@ const Navigation = () => {
           />{" "}
         </a>
         <p className=" md:text-2xl text-lg font-bold ms-1  ">
-          BISTRO BOSS{" "}
+          Diner Lounge{" "}
           <span className="text-lg block text-center">RESTAURANT</span>{" "}
         </p>
         <div className="dropdown navbar-center">

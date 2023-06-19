@@ -6,7 +6,7 @@ const UserPayment = () => {
     return (
         <div>
         <Helmet>
-<title>Bistro Boss | Payment History</title>
+<title>Diner Lounge | Payment History</title>
 
 </Helmet>
     

@@ -9,7 +9,7 @@ const UserHome = () => {
     return (
         <div>
                 <Helmet>
-        <title>Bistro Boss | User Dashboard Home</title>
+        <title>Diner Lounge | User Dashboard Home</title>
        
       </Helmet>
             

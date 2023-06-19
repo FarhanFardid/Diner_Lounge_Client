@@ -44,7 +44,7 @@ const DashBoard = () => {
           <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
           <ul className="menu p-4 w-80 bg-slate-800 text-white ps-5 ">
             <h2 className="text-3xl font-semibold text-center text-orange-600 py-3">
-              Bistro Boss Restaurant
+              Diner Lounge Restaurant
             </h2>
             {isAdmin ? (
               <>

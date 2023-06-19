@@ -12,7 +12,7 @@ const Pizza = () => {
     const pizzas = menu.filter(dt=> dt.category === 'pizza')
     return (
         <div>
-              <CommonBanner img={pizzaBan} heading="Pizzas" content="Experience pizza perfection at Bistro Boss: Our mouthwatering pizza menu brings together artisanal crusts, premium toppings, and tantalizing flavors, delivering a slice of pure satisfaction with every bite." size = "null" ></CommonBanner>
+              <CommonBanner img={pizzaBan} heading="Pizzas" content="Experience pizza perfection at Diner Lounge: Our mouthwatering pizza menu brings together artisanal crusts, premium toppings, and tantalizing flavors, delivering a slice of pure satisfaction with every bite." size = "null" ></CommonBanner>
               <div className="grid md:grid-cols-2 gap-2 p-3 mb-3">
                 {
                     pizzas.map(pizza=> <ItemCard key={pizza._id} item={pizza}></ItemCard> )

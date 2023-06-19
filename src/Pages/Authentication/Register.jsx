@@ -117,7 +117,7 @@ const Register = () => {
   return (
     <div>
       <Helmet>
-        <title>Bistro Boss | Register</title>
+        <title>Diner Lounge | Register</title>
       </Helmet>
       <div
         className="hero h-[550px]"
@@ -230,7 +230,7 @@ const Register = () => {
               </div>
             </form>
             <p className="text-center font-medium py-2">
-              Already have Bistro Boss Account?
+              Already have Diner Lounge Account?
               <Link to="/login" className="text-blue-700 font-bold">
                 {" "}
                 Sign In

@@ -5,7 +5,7 @@ const AdminManageBooking = () => {
     return (
         <div>
               <Helmet>
-<title>Bistro Boss | Admin Booking Manage</title>
+<title>Diner Lounge | Admin Booking Manage</title>
 
 </Helmet>
                    <h2>admin Manage booking Page</h2>

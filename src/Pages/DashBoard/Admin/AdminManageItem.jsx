@@ -12,7 +12,7 @@ const AdminManageItem = () => {
 
     <div>
           <Helmet>
-    <title>Bistro Boss | Admin Manage Menu Items </title>
+    <title>Diner Lounge | Admin Manage Menu Items </title>
   </Helmet>
       <SectionTitle
         heading="Manage All Items"

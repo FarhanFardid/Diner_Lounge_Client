@@ -5,8 +5,8 @@ const Footer = () => {
     return (
         <footer className=" grid md:grid-cols-4 bg-slate-900 md:p-12 p-5 text-white  ">
         <div className="footer__logo items-center justify-center flex flex-col space-y-2">
-          <img src={logo} className='w-12 h-12 rounded-full mx-auto' alt="Bistro boss Logo" />
-          <h2 className='text-lg font-bold text-white'>Bistro Boss</h2>
+          <img src={logo} className='w-12 h-12 rounded-full mx-auto' alt="Diner Lounge Logo" />
+          <h2 className='text-lg font-bold text-white'>Diner Lounge</h2>
         </div>
         <div className="footer__contact items-center justify-center flex flex-col space-y-2">
           <h3 className='font-bold text-red-600 text-base'>Contact Information</h3>
@@ -38,7 +38,7 @@ const Footer = () => {
           <p className='text-xs font-medium'>221/B Baker Street, London, UK</p>
         </div>
         <div className="md:mt-5 col-span-4 text-center">
-          <p className="font-bold text-white  text-lg ">&copy; {new Date().getFullYear()} Bistro Boss Restaurant. All rights reserved.</p>
+          <p className="font-bold text-white  text-lg ">&copy; {new Date().getFullYear()} Diner Lounge Restaurant. All rights reserved.</p>
           <p className="font-bold text-white  text-lg ">Developed By &copy; <span className="text-red-600">Farhan Fardid</span>  </p>
         </div>
       </footer>
