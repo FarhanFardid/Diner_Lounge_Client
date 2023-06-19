@@ -63,7 +63,7 @@ const Navigation = () => {
           <img
             src={logo}
             alt="logo"
-            className="md:w-20 md:h-20 md:p-1 w-12 h-12 rounded-full md:mr-3 "
+            className="md:w-20 md:h-20 md:p-1 w-12 h-12 bg-black text-white rounded-full md:mr-3 "
           />{" "}
         </a>
         <p className=" md:text-2xl text-lg font-bold ms-1  ">

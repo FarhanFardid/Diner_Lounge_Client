@@ -108,7 +108,7 @@ const DashBoard = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/dashboard/userPayment">
+                  <NavLink to="/dashboard/paymentHistory">
                     <FaMoneyCheckAlt className="w-6 h-6 text-cyan-500" />
                     Payment History
                   </NavLink>

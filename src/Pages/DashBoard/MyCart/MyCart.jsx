@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import SectionTitle from "../../../Shared/SectionTitle";
 import useCart from "../../../Hooks/useCart";
 import CartItem from "./CartItem";
+import { Link } from "react-router-dom";
 
 const MyCart = () => {
   const [cart, refetch] = useCart();
@@ -23,7 +24,7 @@ const MyCart = () => {
         <h4 className="text-xl font-semibold w-full text-center">
           Total Price: ${total}{" "}
         </h4>
-        <button className="btn btn-md w-24 bg-slate-800 mx-auto"> Pay </button>
+        <Link to="/dashboard/userPayment"><button className="btn btn-md w-24 bg-slate-800 mx-auto"> Pay </button></Link>
       </div>
       <div className="m-4">
         <div className="overflow-x-auto">

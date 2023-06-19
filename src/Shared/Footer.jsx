@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="footer__contact items-center justify-center flex flex-col space-y-2">
           <h3 className='font-bold text-red-600 text-base'>Contact Information</h3>
           <p className='text-xs font-medium'>Phone: 123-456-7890</p>
-          <p className='text-xs font-medium'>Email: bistro@boss.com</p>
+          <p className='text-xs font-medium'>Email: diner@lounge.com</p>
         </div>
         <div className="footer__social items-center justify-center flex flex-col space-y-2">
           <h3 className="font-bold text-red-600 text-base">Follow Us</h3>

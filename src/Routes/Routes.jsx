@@ -20,6 +20,7 @@ import AdminManageItem from "../Pages/DashBoard/Admin/AdminManageItem";
 import AdminManageBooking from "../Pages/DashBoard/Admin/AdminManageBooking";
 import AllUsers from "../Pages/DashBoard/Admin/AllUsers";
 import AdminRoutes from "./AdminRoutes";
+import PaymentHistory from "../Pages/DashBoard/PaymentHistory/PaymentHistory";
 
 const router = createBrowserRouter([
   {
@@ -87,6 +88,10 @@ const router = createBrowserRouter([
       {
         path: "userPayment",
         element: <UserPayment></UserPayment>,
+      },
+      {
+        path: "paymentHistory",
+        element: <PaymentHistory></PaymentHistory>
       },
       {
         path: "userReview",

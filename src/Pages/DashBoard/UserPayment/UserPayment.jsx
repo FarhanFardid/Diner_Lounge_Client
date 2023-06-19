@@ -6,11 +6,11 @@ const UserPayment = () => {
     return (
         <div>
         <Helmet>
-<title>Diner Lounge | Payment History</title>
+<title>Diner Lounge | Payment </title>
 
 </Helmet>
     
-    <SectionTitle heading="Payment History" subHeading="At a Glance"></SectionTitle>
+    <SectionTitle heading="Payment " subHeading="Please Make a Payment"></SectionTitle>
 </div>
     );
 };
