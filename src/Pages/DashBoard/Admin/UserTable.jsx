@@ -67,45 +67,47 @@ const UserTable = ({ person, index, refetch }) => {
   return (
     <tbody>
       <tr>
-        <td className="font-bold">{index + 1}</td>
+        <td className="font-bold text-center">{index + 1}.</td>
 
         <td>
-          <p className="font-bold">{name}</p>
+          <p className="font-bold text-center">{name}</p>
         </td>
         <td>
-          <div className="font-bold">{email}</div>
+          <div className="font-bold text-center">{email}</div>
         </td>
-        <td className="font-bold">
+        <td className="font-bold text-center">
           {role === "admin" ? (
             <>
               <button>
                 {" "}
-                <span className="flex flex-col items-center justify-center">
-                  Admin <BsPersonCheck className="h-6 w-6" />{" "}
+                <span className="flex gap-2  items-center justify-center">
+                  Admin <BsPersonCheck className="h-6 w-6 text-black" />{" "}
                 </span>
               </button>
             </>
           ) : (
-            <button onClick={() => handleAdmin(_id)}>
-              <span className="flex flex-col items-center justify-center">
+            <button className="text-center" onClick={() => handleAdmin(_id)}>
+              <span className="flex  items-center gap-2 justify-center">
+              
                 User
-                <BsPersonCircle className="h-6 w-6" />
+                <BsPersonCircle className="h-6 w-6 text-black" />
               </span>
             </button>
           )}{" "}
         </td>
-        <th>
+        <td className="font-bold text-center">
           <button
+          
             onClick={() => handleDelete(_id)}
             className={
               role === "admin"
-                ? "btn btn-circle btn-sm bg-red-400 btn-disabled"
-                : "btn btn-circle btn-sm bg-red-800"
+                ? "btn btn-circle btn-sm bg-red-900 hover:bg-red-700 btn-disabled"
+                : "btn btn-circle btn-sm bg-red-900 hover:bg-red-700"
             }
           >
             <FaTrashAlt />
           </button>
-        </th>
+        </td>
       </tr>
     </tbody>
   );

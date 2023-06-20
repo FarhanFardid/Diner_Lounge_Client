@@ -5,11 +5,12 @@ import useAxiosSecure from "./useAxiosSecure";
 
 
 const useAdmin = () => {
-    const {user} = useAuth();
+    const {user,loading} = useAuth();
     // const token = localStorage.getItem('access-token');
     const [axiosSecure] = useAxiosSecure();
     const {data: isAdmin, isLoading: isAdminLoading } = useQuery({
         queryKey : ['isAdmin', user?.email],
+        enabled: !loading,
         // queryFn: async ()=>{
         //     const response = await fetch(`http://localhost:5000/users/admin/${user?.email}`, {
         //       headers: {

@@ -27,12 +27,12 @@ const AdminManageItem = () => {
           <table className="table mx-auto w-full m-5">
             <thead>
               <tr>
-                <th>Item No.</th>
-                <th>Item Image</th>
-                <th>item Name</th>
-                <th>Price</th>
-                <th>Update</th>
-                <th>Delete</th>
+                <th className="font-bold text-center">Item No.</th>
+                <th className="font-bold text-center">Item Image</th>
+                <th className="font-bold text-center">item Name</th>
+                <th className="font-bold text-center">Price</th>
+                <th className="font-bold text-center">Update</th>
+                <th className="font-bold text-center">Delete</th>
               </tr>
             </thead>
 

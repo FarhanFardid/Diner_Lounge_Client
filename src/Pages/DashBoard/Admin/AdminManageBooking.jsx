@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import SectionTitle from "../../../Shared/SectionTitle";
 
 
 const AdminManageBooking = () => {
@@ -8,7 +9,10 @@ const AdminManageBooking = () => {
 <title>Diner Lounge | Admin Booking Manage</title>
 
 </Helmet>
-                   <h2>admin Manage booking Page</h2>
+<SectionTitle
+        heading="Manage All Bookings"
+        subHeading="At a Glance"
+      ></SectionTitle>
         </div>
     );
 };

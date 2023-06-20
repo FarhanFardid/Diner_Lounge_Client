@@ -10,11 +10,11 @@ const HomeBanner = () => {
     return (
         <Carousel className="autoPlay infiniteLoop">
         <div>
-            <img src={ban1} />
+            <img src={ban5} />
           
         </div>
         <div>
-            <img src={ban2} />
+            <img src={ban4} />
        
         </div>
         <div>
@@ -22,15 +22,15 @@ const HomeBanner = () => {
            
         </div>
         <div>
-            <img src={ban4} />
+            <img src={ban6} />
           
         </div>
         <div>
-            <img src={ban5} />
+            <img src={ban2} />
        
         </div>
         <div>
-            <img src={ban6} />
+            <img src={ban1} />
            
         </div>
     </Carousel>

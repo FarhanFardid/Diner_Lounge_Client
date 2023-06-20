@@ -5,7 +5,10 @@ import useAxiosSecure from "../../../Hooks/useAxiosSecure";
 const MenuTable = ({ item, index, refetch }) => {
   const { name, _id, image, price } = item;
   const [axiosSecure] = useAxiosSecure();
-
+  
+const handleUpdate = (id) =>{
+  console.log(id);
+}
   const handleDelete = (_id) => {
     Swal.fire({
       title: "Remove Recipe From Menu?",
@@ -40,9 +43,9 @@ const MenuTable = ({ item, index, refetch }) => {
   return (
     <tbody>
       <tr>
-        <td className="font-bold">{index + 1}</td>
+        <td className="font-bold text-center">{index + 1}</td>
 
-        <td>
+        <td className="font-bold text-center">
           <div className="flex items-center space-x-3">
             <div className="avatar">
               <div className="mask mask-squircle w-24 h-24">
@@ -51,19 +54,19 @@ const MenuTable = ({ item, index, refetch }) => {
             </div>
           </div>
         </td>
-        <td>
+        <td className="font-bold text-center">
           <div className="font-bold">{name}</div>
         </td>
-        <td className="font-bold"> ${price}</td>
-        <td>
+        <td className="font-bold text-center"> ${price}</td>
+        <td className="font-bold text-center">
           <button
-            onClick={() => handleDelete(_id)}
+            onClick={() => handleUpdate(_id)}
             className="btn btn-circle btn-sm bg-green-700"
           >
             <FaArrowCircleUp />
           </button>
         </td>
-        <td>
+        <td className="font-bold text-center">
           <button
             onClick={() => handleDelete(_id)}
             className="btn btn-circle btn-sm bg-red-800"

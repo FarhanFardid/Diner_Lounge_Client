@@ -5,10 +5,12 @@ import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { FaShoppingCart} from 'react-icons/fa';
+import { FaShoppingCart } from "react-icons/fa";
 import useCart from "../Hooks/useCart";
+import useAdmin from "../Hooks/useAdmin";
 
 const Navigation = () => {
+  const [isAdmin] = useAdmin();
   const { user, logOut } = useContext(AuthContext);
   const [cart] = useCart();
 
@@ -37,18 +39,29 @@ const Navigation = () => {
       <li>
         <Link to="/contact"> Contact Us </Link>
       </li>
-
-  
+    
 
       {user ? (
         <>
-           <li><Link to='/dashboard/myCart'>
-       
-       <button className="btn bg-transparent gap-2">
-         Cart <FaShoppingCart/>
-         <div className="badge badge-info">+{cart?.length}</div>
-       </button>
-     </Link></li> 
+        
+          {isAdmin ? (
+        <li>
+          <Link to="/dashboard/adminHome"> Dashboard </Link>
+        </li>
+      ) : (
+        <>  <li>
+        <Link to="/dashboard/userHome"> Dashboard </Link>
+      </li><li>
+          <Link to="/dashboard/myCart">
+            <button className="btn text-xs bg-transparent w-fit gap-1">
+              Cart <FaShoppingCart />
+              <span className="badge badge-xs badge-info">+{cart?.length}</span>
+            </button>
+          </Link>
+        </li></>
+      
+      )}
+        
         </>
       ) : (
         <li></li>
@@ -56,7 +69,7 @@ const Navigation = () => {
     </>
   );
   return (
-    <div className="navbar bg-slate-900 text-white bg-opacity-30 fixed z-10 max-w-screen-xl ">
+    <div className="navbar bg-slate-900 text-white bg-opacity-60 fixed z-10 max-w-screen-xl ">
       <div className="navbar-start">
         <a className=" normal-case  ">
           {" "}
@@ -89,14 +102,14 @@ const Navigation = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-purple-400  rounded-box w-52 font-bold"
+            className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-slate-700  rounded-box w-52 font-bold text-xs"
           >
             {navOptions}
           </ul>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 font-bold">{navOptions}</ul>
+        <ul className="menu menu-horizontal px-1 font-bold text-xs">{navOptions}</ul>
       </div>
       <div className="navbar-end">
         {user ? (
