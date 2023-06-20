@@ -9,7 +9,17 @@ import { GrRestaurant } from "react-icons/gr";
 import { GiWallet } from "react-icons/gi";
 import { TbTruckDelivery } from "react-icons/tb";
 import useMenu from "../../../Hooks/useMenu";
-import { Bar, BarChart, CartesianGrid, Cell, XAxis, YAxis } from "recharts";
+import {
+  Bar,
+  BarChart,
+  CartesianGrid,
+  Cell,
+  XAxis,
+  YAxis,
+  PieChart,
+  Pie,
+  Legend,
+} from "recharts";
 
 const AdminHome = () => {
   const { user } = useAuth();
@@ -29,36 +39,26 @@ const AdminHome = () => {
   );
   const menuData = [
     {
-      name: 'Pizza',
-      uv: pizzas.length,
-      pv: 2400,
-      amt: 2400,
+      name: "Pizza",
+      count: pizzas.length,
     },
     {
-      name: 'Soup',
-      uv: soups.length,
-      pv: 1398,
-      amt: 2210,
+      name: "Soup",
+      count: soups.length,
     },
     {
-      name: 'Dessert',
-      uv: desserts.length,
-      pv: 1398,
-      amt: 2210,
+      name: "Dessert",
+      count: desserts.length,
     },
     {
-      name: 'Salad',
-      uv: salads.length,
-      pv: 1398,
-      amt: 2210,
+      name: "Salad",
+      count: salads.length,
     },
     {
-      name: 'Specials',
-      uv: specials.length,
-      pv: 1398,
-      amt: 2210,
+      name: "Specials",
+      count: specials.length,
     },
-]
+  ];
 
   const { data: stats = {} } = useQuery({
     queryKey: ["admin-stats"],
@@ -68,7 +68,7 @@ const AdminHome = () => {
     },
   });
   console.log(stats);
-  const colors = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+  const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", 'black'];
   const getPath = (x, y, width, height) => {
     return `M${x},${y + height}C${x + width / 3},${y + height} ${
       x + width / 2
@@ -85,7 +85,31 @@ const AdminHome = () => {
 
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
   };
+  const RADIAN = Math.PI / 180;
+  const renderCustomizedLabel = ({
+    cx,
+    cy,
+    midAngle,
+    innerRadius,
+    outerRadius,
+    percent,
+  }) => {
+    const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
+    const x = cx + radius * Math.cos(-midAngle * RADIAN);
+    const y = cy + radius * Math.sin(-midAngle * RADIAN);
 
+    return (
+      <text
+        x={x}
+        y={y}
+        fill="white"
+        textAnchor={x > cx ? "start" : "end"}
+        dominantBaseline="central"
+      >
+        {`${(percent * 100).toFixed(0)}%`}
+      </text>
+    );
+  };
   return (
     <div className="text-center">
       <Helmet>
@@ -135,33 +159,65 @@ const AdminHome = () => {
         </div>
       </div>
       <div>
-        <h3 className="text-2xl font-bold text-center p-2">Menu item Category wise Distribution</h3>
-        <BarChart
-        className="mx-auto m-8"
-          width={700}
-          height={550}
-          data={menuData}
-          margin={{
-            top: 20,
-            right: 30,
-            left: 20,
-            bottom: 5,
-          }}
-        >
-          <CartesianGrid strokeDasharray="3 3" />
-          <XAxis dataKey="name" />
-          <YAxis />
-          <Bar
-            dataKey="uv"
-            fill="#8884d8"
-            shape={<TriangleBar />}
-            label={{ position: "top" }}
-          >
-            {menuData.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={colors[index % 20]} />
-            ))}
-          </Bar>
-        </BarChart>
+        <h3 className="text-2xl font-bold text-center p-2">
+          Menu item Category wise Distribution
+        </h3>
+        <div className="grid grid-cols-12 gap-2">
+          <div className="col-span-7">
+            {" "}
+            <BarChart
+              className="mx-auto m-3"
+              width={600}
+              height={550}
+              data={menuData}
+              margin={{
+                top: 20,
+                right: 30,
+                left: 20,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis />
+              <Bar
+                dataKey="count"
+                fill="#8884d8"
+                shape={<TriangleBar />}
+                label={{ position: "top" }}
+              >
+                {menuData.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+                ))}
+              </Bar>
+            </BarChart>
+          </div>
+          <div className="col-span-5">
+            {" "}
+            
+              <PieChart width={400} height={400}>
+                <Legend></Legend>
+                <Pie
+                  data={menuData}
+                  cx="50%"
+                  cy="50%"
+                  labelLine={false}
+                  label={renderCustomizedLabel}
+                  outerRadius={80}
+                  fill="#8884d8"
+                  dataKey="count"
+                >
+                  {menuData.map((entry, index) => (
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={colors[index % colors.length]}
+                    />
+                  ))}
+                </Pie>
+              </PieChart>
+         
+          </div>
+        </div>
       </div>
     </div>
   );
