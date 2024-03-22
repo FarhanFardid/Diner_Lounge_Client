@@ -121,8 +121,9 @@ const AdminAddItem = () => {
 
 </div>
 
-<div className="col-span-2 p-3 bg-slate-900 w-fit mx-auto flex text-white rounded-lg mb-5 hover:bg-slate-700">
-<input type="submit" className=" " value="Add Item" /> <i> <ImSpoonKnife className="h-5 w-5"/></i></div>
+<div className="col-span-2 p-1 bg-slate-900 w-48 h-16 btn btn-square mx-auto flex justify-center items-center text-white rounded-lg  hover:bg-slate-700 ">
+<i> <ImSpoonKnife className="h-5 w-5"/></i>
+<input type="submit" className=" text-white" value="Add Item" /> </div>
         </form>
       </div>
     </div>
