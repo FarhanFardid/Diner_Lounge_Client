@@ -19,7 +19,7 @@ const Salads = () => {
           }
 
        </div>
-       <Link to="/order/salad"><Btn btn="Order Now"></Btn></Link>
+       <Link to="/order"><Btn btn="Order Now"></Btn></Link>
   </div>
     );
 };

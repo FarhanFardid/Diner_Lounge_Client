@@ -23,8 +23,9 @@ const OrderFood = () => {
 
   const categories = ["pizza", "soup", "dessert", "salad", "special"];
   const { category } = useParams();
+
   let startIndex;
-  // console.log(category);
+  console.log(category);
 
   let initialIndex = categories.indexOf(category);
 

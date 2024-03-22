@@ -20,7 +20,7 @@ const Desserts = () => {
           }
 
        </div>
-       <Link to="/order/dessert"><Btn btn="Order Now"></Btn></Link>
+       <Link to="/order"><Btn btn="Order Now"></Btn></Link>
   </div>
     );
 };

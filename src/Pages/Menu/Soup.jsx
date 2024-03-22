@@ -19,7 +19,7 @@ const Soup = () => {
           }
 
        </div>
-       <Link to="/order/soup"><Btn btn="Order Now"></Btn></Link>
+       <Link to="/order"><Btn btn="Order Now"></Btn></Link>
   </div>
     );
 };

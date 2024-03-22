@@ -18,7 +18,7 @@ const TodayOffer = () => {
                     offers.map(offer=> <ItemCard key={offer._id} item={offer}></ItemCard> )
                 }
              </div>
-             <Link to="/order/special"><Btn btn="Order Now"></Btn></Link>
+             <Link to="/order"><Btn btn="Order Now"></Btn></Link>
         </div>
     );
 };

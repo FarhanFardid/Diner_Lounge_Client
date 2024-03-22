@@ -74,17 +74,17 @@ const FoodCard = ({ item, display }) => {
           <h2 className="card-title font-bold">{name}</h2>
           <p className="p-1 w-full ">{recipe}</p>
 
-          <div className="card-actions   bottom-1 my-1   ">
+          <div className="card-actions  bottom-1 my-1   ">
             {display === "show" ? (
               <button
                 onClick={() => handleAddCart(item)}
-                className="font-bold btn-outline p-2 rounded-md mb-5 border-0 border-b-2  border-black bg-slate-100"
+                className="font-bold btn-outline p-2 rounded-md relative bottom-1 border-0 border-b-2  border-black bg-slate-300"
               >
                 Add To Cart
               </button>
             ) : (
-              <Link to="/order/special">
-                <Btn btn="Order Now"> </Btn>
+              <Link to="/order">
+                <button   className="font-bold btn-outline p-2 rounded-md relative bottom-1 border-0 border-b-2  border-black bg-slate-300 ">Order Now </button>
               </Link>
             )}
           </div>

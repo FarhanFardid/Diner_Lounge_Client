@@ -18,7 +18,7 @@ const Pizza = () => {
                     pizzas.map(pizza=> <ItemCard key={pizza._id} item={pizza}></ItemCard> )
                 }
              </div>
-             <Link to="/order/pizza"><Btn btn="Order Now"></Btn></Link>
+             <Link to="/order"><Btn btn="Order Now"></Btn></Link>
         </div>
     );
 };
