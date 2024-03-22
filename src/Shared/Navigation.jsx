@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/icon/logo.png";
 import { Tooltip } from "@mui/material";
 import { useContext } from "react";
@@ -13,11 +13,13 @@ const Navigation = () => {
   const [isAdmin] = useAdmin();
   const { user, logOut } = useContext(AuthContext);
   const [cart] = useCart();
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     logOut()
       .then(() => {
         toast.success("Successfully Logout");
+        navigate('/')
       })
       .catch((error) => {
         console.log(error);
