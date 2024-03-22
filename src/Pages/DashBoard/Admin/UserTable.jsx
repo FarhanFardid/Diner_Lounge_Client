@@ -15,7 +15,8 @@ const UserTable = ({ person, index, refetch }) => {
       confirmButtonText: "Yes, Remove",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/users/${id}`, {
+        // fetch(`http://localhost:5000/users/${id}`, {
+        fetch(`https://diner-lounge-server.vercel.app/users/${id}`, {
           method: "DELETE",
           headers: {
             "content-type": "application/json",
@@ -47,7 +48,8 @@ const UserTable = ({ person, index, refetch }) => {
       confirmButtonText: "Yes, Make Admin",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/users/admin/${id}`, {
+        // fetch(`http://localhost:5000/users/admin/${id}`, {
+        fetch(`https://diner-lounge-server.vercel.app/users/admin/${id}`, {
           method: "PATCH",
         })
           .then((res) => res.json())

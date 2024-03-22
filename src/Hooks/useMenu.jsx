@@ -7,6 +7,7 @@ const useMenu = () => {
   // const [loading,setLoading] = useState(true);
   // useEffect(()=>{
   //     fetch('http://localhost:5000/menu')
+  //     fetch('https://diner-lounge-server.vercel.app/menu')
   //     .then(res => res.json())
   //     .then (data => {
   //         setMenu(data);
@@ -19,7 +20,8 @@ const useMenu = () => {
     queryKey: ["menu"],
 
     queryFn: async () => {
-      const response = await fetch("http://localhost:5000/menu");
+      // const response = await fetch("http://localhost:5000/menu");
+      const response = await fetch("https://diner-lounge-server.vercel.app/menu");
       return response.json();
     },
   });

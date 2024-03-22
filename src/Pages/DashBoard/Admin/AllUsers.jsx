@@ -12,6 +12,7 @@ const AllUsers = () => {
     const { data : users =[], refetch } = useQuery(['users'], async()=>{
       // without axiosSecure
     //     const response = await fetch('http://localhost:5000/users' , {
+    //     const response = await fetch('https://diner-lounge-server.vercel.app/users' , {
     //       headers: {
     //         authorization: `bearer ${token}`
     //       }

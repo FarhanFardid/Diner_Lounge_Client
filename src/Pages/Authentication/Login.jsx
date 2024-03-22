@@ -21,7 +21,7 @@ const Login = () => {
     },[])
     const handleCaptcha = (e)=>{
         const user_captcha_value = e.target.value;
-        console.log(user_captcha_value);
+        // console.log(user_captcha_value);
         if (validateCaptcha(user_captcha_value)){
            setDisable(false)
         }
@@ -39,7 +39,7 @@ const Login = () => {
             .then(res=>{
               const loggedUser = res.user;
               toast.success("Successfully Signed In")
-              console.log(loggedUser);
+              // console.log(loggedUser);
               navigate(from, {replace:true})
               form.reset()
                const saveUser = {
@@ -48,8 +48,9 @@ const Login = () => {
                   : "Name not available",
                 email: loggedUser.email,
               };
-              console.log(saveUser);
-              fetch("http://localhost:5000/users", {
+              // console.log(saveUser);
+              // fetch("http://localhost:5000/users", {
+              fetch("https://diner-lounge-server.vercel.app/users", {
                 method: "POST",
                 headers: {
                   "content-type": "application/json",
@@ -78,7 +79,7 @@ const Login = () => {
           google()
           .then(res =>{
             const loggedUser = res.user; 
-            console.log(loggedUser);
+            // console.log(loggedUser);
             toast.success("Successfully Signed In")
             navigate(from, {replace:true})
             const saveUser = {
@@ -87,8 +88,9 @@ const Login = () => {
                 : "Name not available",
               email: loggedUser.email,
             };
-            console.log(saveUser);
-            fetch("http://localhost:5000/users", {
+            // console.log(saveUser);
+            // fetch("http://localhost:5000/users", {
+            fetch("https://diner-lounge-server.vercel.app/users", {
               method: "POST",
               headers: {
                 "content-type": "application/json",
@@ -115,7 +117,7 @@ const Login = () => {
               const loggedUser = res.user; 
               toast.success("Successfully Signed In")
               navigate(from, {replace:true})
-              console.log(loggedUser);
+              // console.log(loggedUser);
             } )
             .catch(error=> {
               console.log(error);
@@ -125,7 +127,7 @@ const Login = () => {
          
         }
         const fbHandle = () =>{
-          toast.warning("Facebook Integration will implement soon..... ")
+          toast.warning("Facebook Integration will be implemented soon..... ")
          }
   return (
     <div>

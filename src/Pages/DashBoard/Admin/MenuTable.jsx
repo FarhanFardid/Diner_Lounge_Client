@@ -29,6 +29,7 @@ const handleUpdate = (id) =>{
     }).then((result) => {
       if (result.isConfirmed) {
         // fetch(`http://localhost:5000/menu/${id}`, {
+        // fetch(`https://diner-lounge-server.vercel.app/menu/${id}`, {
         //     method: "DELETE",
         //     headers:{
         //         "content-type" : "application/json"

@@ -20,7 +20,7 @@ const Register = () => {
   } = useForm();
   const navigate = useNavigate();
   const onSubmit = (data) => {
-    console.log(data);
+    // console.log(data);
     createUser(data.email, data.password)
       .then(res => {
         const createdUser = res.user;
@@ -30,7 +30,8 @@ const Register = () => {
           .then(() => {
             toast.success("User Profile Successfully Updated ");
             const saveUser = { name: data.name, email: data.email };
-            fetch("http://localhost:5000/users", {
+            // fetch("http://localhost:5000/users", {
+            fetch("https://diner-lounge-server.vercel.app/users", {
               method: "POST",
               headers: {
                 "content-type": "application/json",
@@ -65,7 +66,7 @@ const Register = () => {
       .then(res => {
         const createdUser = res.user;
       
-        console.log(createdUser);
+        // console.log(createdUser);
         toast.success("Successfully Signed Up");
         logOut();
               navigate("/login");
@@ -76,7 +77,8 @@ const Register = () => {
           email: createdUser.email,
         };
         console.log(saveUser);
-        fetch("http://localhost:5000/users", {
+        // fetch("http://localhost:5000/users", {
+        fetch("https://diner-lounge-server.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -101,7 +103,7 @@ const Register = () => {
     github()
       .then((res) => {
         const createdUser = res.user;
-        console.log(createdUser);
+        // console.log(createdUser);
         toast.success("Successfully Signed Up");
         logOut();
         navigate("/login");

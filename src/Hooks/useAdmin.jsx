@@ -12,6 +12,7 @@ const useAdmin = () => {
         queryKey : ['isAdmin', user?.email],
         enabled: !loading,
         // queryFn: async ()=>{
+        //     const response = await fetch(`https://diner-lounge-server.vercel.app/users/admin/${user?.email}`, {
         //     const response = await fetch(`http://localhost:5000/users/admin/${user?.email}`, {
         //       headers: {
         //         authorization: `bearer ${token}`
