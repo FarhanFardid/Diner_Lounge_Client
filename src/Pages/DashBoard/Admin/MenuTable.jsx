@@ -7,9 +7,16 @@ const MenuTable = ({ item, index, refetch }) => {
   const [axiosSecure] = useAxiosSecure();
   
 const handleUpdate = (id) =>{
+  Swal.fire(
+    "Update is coming soon!",
+    "Recipe can be updated.",
+    "success"
+  );
   console.log(id);
+  
 }
-  const handleDelete = (_id) => {
+  const handleDelete = (id) => {
+    console.log("delete id with ", id);
     Swal.fire({
       title: "Remove Recipe From Menu?",
       text: "You won't be able to revert this!",
@@ -20,13 +27,14 @@ const handleUpdate = (id) =>{
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        // fetch(`http://localhost:5000/menu/${_id}`, {
+        // fetch(`http://localhost:5000/menu/${id}`, {
         //     method: "DELETE",
         //     headers:{
         //         "content-type" : "application/json"
         //     }
         // })
-        axiosSecure.delete(`/menu/${_id}`).then((res) => {
+        axiosSecure.delete(`/menu/${_id}`)
+        .then((res) => {
           console.log(res.data);
           if (res.data.deletedCount > 0) {
             refetch();

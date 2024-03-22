@@ -1,0 +1,8 @@
+{
+  "_id": "642c155b2c4774f05c36ee83o2",
+  "name": "Chicken and Walnut Salad",
+  "recipe": "Tender grilled chicken, crunchy walnuts, crisp lettuce, juicy grapes, and tangy dressing come together in a delightful Chicken Walnut Salad.",
+  "image": "https://www.framedcooks.com/wp-content/uploads/2017/08/844863607_CUQy5-M.jpg",
+  "category": "offered",
+  "price": { "$numberDouble": "13.5" }
+}

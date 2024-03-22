@@ -46,7 +46,7 @@ const AdminAddItem = () => {
     })
     console.log(data);
   }
-  console.log(image_Hosting_Token)
+  // console.log(image_Hosting_Token);
   return (
     <div>
        <Helmet>

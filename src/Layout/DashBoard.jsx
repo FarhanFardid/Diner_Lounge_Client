@@ -26,7 +26,7 @@ const DashBoard = () => {
   // without axiosSecure use  "const admin = isAdmin?.admin" and with axiosSecure use only "const [isAdmin] = useAdmin();"
 
   // const admin = isAdmin?.admin;
-  console.log(isAdmin);
+  // console.log(isAdmin);
   return (
     <>
       <div className="drawer drawer-mobile">
