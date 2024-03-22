@@ -11,6 +11,9 @@ const UserBooking = () => {
 </Helmet>
     
     <SectionTitle heading="My Bookings" subHeading="Excellent Ambience"></SectionTitle>
+    
+    <h3 className="text-center text-2xl font-medium p-3">This Page is under Implementation.... Updating Soon...</h3>
+       {/* TODO: Implement user Bookings */}
 </div>
     );
 };

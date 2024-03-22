@@ -126,7 +126,7 @@ const CheckoutForm = ({cart, price}) => {
         </button>
       </form>
      {cardError && <p className="text-red-600 text-center">{cardError}</p>} 
-     {transactionId && <p className="text-green-600 text-center">Transaction Successful with TransactionId {transactionId}</p> }
+     {transactionId && <p className="text-green-600 text-center">Transaction Successful with Transaction Id:  {transactionId}</p> }
       </>
        
     );

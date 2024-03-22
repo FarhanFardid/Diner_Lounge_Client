@@ -5,7 +5,7 @@ const ContactForm = () => {
     return (
         <div>
             <SectionTitle heading="Contact Form" subHeading="Send Us a Message"></SectionTitle>
-            <div className="grid grid-cols-2 gap-4 py-3 bg-slate-100 p-5 my-8">
+            <form className="grid grid-cols-2 gap-4 py-3 bg-slate-100 p-5 my-8">
             <div className="form-control">
           <label className="label">
             <span className="label-text font-bold">Name</span>
@@ -16,13 +16,13 @@ const ContactForm = () => {
           <label className="label">
             <span className="label-text font-bold">Email</span>
           </label>
-          <input type="text" placeholder="Enter your email" className="input input-bordered" />
+          <input type="email" placeholder="Enter your email" className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">
             <span className="label-text font-bold">Phone</span>
           </label>
-          <input type="text" placeholder="Enter your phone" className="input input-bordered" />
+          <input type="number" placeholder="Enter your phone" className="input input-bordered" />
         </div>
         <div className="form-control">
           <label className="label">
@@ -37,9 +37,9 @@ const ContactForm = () => {
           <textarea rows="10"  type="text" placeholder="Write your Message here" className="input input-bordered" />
         </div>
         <div className="form-control mt-6 col-span-2 w-44 mx-auto">
-          <button className="btn bg-[#D1A054]">Send Message<FaLocationArrow className="m-2"/> </button>
+          <button type="submit" className="btn bg-[#D1A054]">Send Message<FaLocationArrow className="m-2"/> </button>
         </div>
-            </div>
+            </form>
            
       </div>
     

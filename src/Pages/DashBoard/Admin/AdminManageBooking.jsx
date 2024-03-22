@@ -15,6 +15,7 @@ const AdminManageBooking = () => {
       ></SectionTitle>
 
       <h3 className="text-center text-2xl font-medium p-3">Booking Page is under Implementation.... Updating Soon...</h3>
+         {/* TODO: Implement admin manage bookings */}
         </div>
     );
 };

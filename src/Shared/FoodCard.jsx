@@ -1,24 +1,28 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Btn from "../Components/Btn";
 import { useContext } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import useCart from "../Hooks/useCart";
 
-
 //  To Do: Food Details and Add to cart page redirects
 
 const FoodCard = ({ item, display }) => {
-  const { image, name, recipe, price,_id } = item;
+  const { image, name, recipe, price, _id } = item;
   const { user } = useContext(AuthContext);
   const [, refetch] = useCart();
   const navigate = useNavigate();
   const location = useLocation();
 
   const handleAddCart = (item) => {
-   console.log(item)
+    console.log(item);
     if (user) {
-      const cartItem = {foodItemId:_id, name, image, price, email:user.email}
+      const cartItem = {
+        foodItemId: _id,
+        name,
+        image,
+        price,
+        email: user.email,
+      };
       fetch("http://localhost:5000/carts", {
         method: "POST",
         headers: {
@@ -28,8 +32,7 @@ const FoodCard = ({ item, display }) => {
       })
         .then((res) => res.json())
         .then((data) => {
-          
-          console.log(data)
+          console.log(data);
           if (data.insertedId) {
             refetch(); // refetch to show the updated data
             Swal.fire({
@@ -38,9 +41,9 @@ const FoodCard = ({ item, display }) => {
               icon: "success",
               confirmButtonText: "Cool",
             });
-          } 
+          }
         });
-    }else {
+    } else {
       Swal.fire({
         title: "Please, login to order food",
         icon: "warning",
@@ -50,12 +53,11 @@ const FoodCard = ({ item, display }) => {
         confirmButtonText: "Login Now",
       }).then((result) => {
         if (result.isConfirmed) {
-          navigate("/login",{state : {from : location}});
+          navigate("/login", { state: { from: location } });
         }
       });
     }
   };
-  
 
   return (
     <div>
@@ -84,7 +86,9 @@ const FoodCard = ({ item, display }) => {
               </button>
             ) : (
               <Link to="/order">
-                <button   className="font-bold btn-outline p-2 rounded-md relative bottom-1 border-0 border-b-2  border-black bg-slate-300 ">Order Now </button>
+                <button className="font-bold btn-outline p-2 rounded-md relative bottom-1 border-0 border-b-2  border-black bg-slate-300 ">
+                  Order Now{" "}
+                </button>
               </Link>
             )}
           </div>
