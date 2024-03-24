@@ -54,3 +54,15 @@ ii. Browse through the menu, select food items, and add them to the cart.
 iii. Proceed to checkout, enter payment details, and confirm the order.
 
 iv. View payment history for reference.
+
+
+### Future Development Scope
+i. User Home Page:Implement a personalized home page for users, where they can view their order history, favorite items, and personalized recommendations based on their past orders.
+
+ii. User Review System: Introduce a review system where users can rate and provide feedback on the food items they have ordered. This will help other users make informed decisions and provide valuable insights for the restaurant.
+
+iii. User Booking System: Enable users to book tables or make reservations directly through the platform. Users can select the date, time, and number of guests, and receive confirmation of their booking.
+
+iv. Admin Booking Management System: Develop a booking management system for administrators to track and manage table reservations. Admins can view upcoming bookings, confirm reservations, and allocate tables accordingly.
+
+v. Enhanced Analytics: Implement advanced analytics and reporting features for both admins and users. This could include insights into popular menu items, peak hours, revenue trends, and customer demographics.
