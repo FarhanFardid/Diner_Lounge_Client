@@ -117,7 +117,7 @@ const Login = () => {
               const loggedUser = res.user; 
               toast.success("Successfully Signed In")
               navigate(from, {replace:true})
-              // console.log(loggedUser);
+              console.log(loggedUser);
             } )
             .catch(error=> {
               console.log(error);
