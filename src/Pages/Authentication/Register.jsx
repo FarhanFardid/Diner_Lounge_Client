@@ -103,7 +103,7 @@ const Register = () => {
     github()
       .then((res) => {
         const createdUser = res.user;
-        // console.log(createdUser);
+        console.log(createdUser);
         toast.success("Successfully Signed Up");
         logOut();
         navigate("/login");
