@@ -1,7 +1,5 @@
 import { Link, NavLink, Outlet } from "react-router-dom";
-
 import Footer from "../Shared/Footer";
-
 import { MdRateReview } from "react-icons/md";
 import { RiMessage2Fill } from "react-icons/ri";
 import { GiKnifeFork, GiNotebook } from "react-icons/gi";
